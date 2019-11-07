@@ -181,3 +181,60 @@ Rails 5.2.3
 以上でRuby on Railsをインストールできました。
 
 お疲れ様でした。
+
+
+### Railsのバージョンのダウングレード方法
+例えば、Rails6.0.0をインストールしていて、Rails5.2.3を使いたい場合、どのようにRailsのバージョンをダウングレードするか記載します。
+
+まず今のRailsのバージョンを確認してください。
+
+```
+$ rails -v
+Rails 6.0.0
+```
+
+次にRailsをアンインストールします。以下のコマンドを実行してください。
+
+```
+$ gem uninstall rails
+Successfully uninstalled rails-6.0.0
+```
+
+上記のコマンドだけでは、まだRailsはアンインストールできていません。`railties`というRailsのコアライブラリをアンインストールする必要があります。
+
+次に以下のコマンドを実行してください。
+
+```
+$ gem uninstall railties -v '6.0.0'
+```
+
+上記のコマンドを実行すると以下のような結果が表示されます。
+
+```
+Removing rails
+Successfully uninstalled railties-6.0.0
+```
+
+Railsのバージョンの確認のコマンドを実行しても、`command not found`と表示されます。
+
+```
+$ rails -v
+rbenv: rails: command not found
+```
+
+Railsをアンインストールしたら、使いたいRailsのバージョンをインストールをします。(今回の場合は5.2.3）以下のコマンドを実行してください。
+
+```
+$ gem install rails -v 5.2.3
+```
+
+実行ができたら以下のコマンドでRailsのバージョンを確認します。
+
+```
+$ rails -v
+Rails 5.2.3
+```
+
+以上でRuby on Railsをダウングレードができました。
+
+お疲れ様でした。
