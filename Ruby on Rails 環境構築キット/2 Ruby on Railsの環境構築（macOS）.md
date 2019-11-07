@@ -50,10 +50,7 @@ rbenvをインストールします。rbenvをインストールすることでr
 
 ```
 $ brew install rbenv
-$ brew install ruby-build
 ```
-
-`ruby-build`をインストールすることで、`rbenv install`というコマンドを使うことができます。
 
 上記のコマンドを実行したらrbenvがインストールされているか確認します。以下のコマンドを実行してバージョンの情報が表示されていればインストールされています。
 
