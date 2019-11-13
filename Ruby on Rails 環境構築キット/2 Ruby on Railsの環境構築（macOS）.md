@@ -67,7 +67,7 @@ rbenvコマンドを利用するために、rbenvにPATHを通します。PATH�
 
 それでは、下記のコマンドを1つずつ実行してください。
 
-```
+``` 
 $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 $ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
 $ source ~/.bash_profile
