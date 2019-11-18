@@ -74,6 +74,10 @@ $ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_
 $ source ~/.bash_profile
 ```
 
+`>> ~/.bash_profile`でスクリプトを`.bash_profile`に追加しています。
+
+また最後に`source`コマンドを使うことで`.bash_profile`に追加した内容を反映できます。
+
 
 ## Rubyをインストール
 まずRubyをインストールする前に、先ほどインストールしたrbenvを使ってインストール可能なrubyのバージョンを確認します。
