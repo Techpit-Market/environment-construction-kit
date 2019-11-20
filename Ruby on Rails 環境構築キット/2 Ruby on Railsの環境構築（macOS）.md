@@ -20,7 +20,7 @@ Webアプリケーションを開発するための環境を構築します。
 ## Homebrewをインストール
 Homebrewとは、ソフトウェアの導入を単純化するmacOSのパッケージ管理システムです。
 
-下記のURLからHomebrewをインストールします。
+下記のリンクからHomebrewをインストールします。
 
 [Homebrew](https://brew.sh/index_ja.html)
 
