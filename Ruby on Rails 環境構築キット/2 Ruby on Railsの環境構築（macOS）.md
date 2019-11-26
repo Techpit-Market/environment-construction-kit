@@ -151,9 +151,11 @@ ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-darwin19]
 
 
 ## Bundlerをインストールする
-Bundlerとは、必要なgemとバージョンを正確に追跡およびインストールすることにより、Rubyプロジェクトに一貫した環境を提供します。
+Bundlerとは、必要なGemとバージョンを正確に追跡およびインストールすることにより、Rubyプロジェクトに一貫した環境を提供します。GemとはRuby用のライブラリを使うときに必要となるパッケージ管理ツールのことです。
 
-参考）[Bundler](https://bundler.io/)
+参考）
+- [Bundler](https://bundler.io/)
+- [RubyGems](https://rubygems.org/)
 
 それではBundlerをインストールしましょう。以下のコマンドを実行してください。
 
