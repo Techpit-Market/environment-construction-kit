@@ -3,7 +3,7 @@
 > - Ruby 2.6.5
 > - Rails 5.2.3
 >
-> Rails6を使う場合はバージョン等を編集してください。
+> Rails6を使う場合は[こちら](https://github.com/Techpit-Market/environment-construction-kit/blob/master/Ruby%20on%20Rails%20%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89%E3%82%AD%E3%83%83%E3%83%88/3%20Rails6%E3%81%AE%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89%EF%BC%88macOS%EF%BC%89.md)を参照ください。
 >
 > ここから教材
 
