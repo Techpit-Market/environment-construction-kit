@@ -1,6 +1,10 @@
-# Dockerを使う準備(Mac編)
+> このパートでは、Docker Desktop for Macをインストールする手順を記載しています。
+>
+> ↓ ここから教材
 
-このパートでは、MacでDockerを使うための準備をします。
+# Dockerをインストール（macOS)
+
+このパートでは、macOSでDockerを使うための準備をします。
 
 **すでにDocker Desktop for Macを使っているという方はこのパートは読み飛ばして、次のパートに進んでください。**
 
