@@ -218,6 +218,8 @@ Docker上で動く各サービスの単位をコンテナと呼びます。
 $ docker-compose up -d workspace php-fpm nginx postgres
 ```
 
+コマンドの意味は以下の通りです。
+
 |コマンド|説明|
 |---|---|
 |docker-compose|複数のコンテナを同時に取り扱うDocker Composeという機能を使うためのコマンド|
