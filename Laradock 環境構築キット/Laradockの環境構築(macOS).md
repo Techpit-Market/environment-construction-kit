@@ -1,6 +1,6 @@
-> ここではmacOSにおけるPHP/Laravel(Laradock)の環境構築方法を記載しています。
-> Dockerはインストール済みであることを前提としております。
-> 起動させるコンテナは`workspace`, `php-fpm`, `nginx`, `postgres`としていますが、教材に合わせて置き換える等してください。
+> ここではmacOSにおけるPHP/Laravel(Laradock)の環境構築方法を記載しています。  
+> Dockerはインストール済みであることを前提としています。  
+> 起動させるコンテナは`workspace`, `php-fpm`, `nginx`, `postgres`としていますが、教材に合わせて置き換える等してください。  
 > `app-name`となっている箇所は、今回作成するアプリケーション名に置き換えてください。
 >
 > ここから教材
@@ -168,7 +168,7 @@ COMPOSE_PATH_SEPARATOR=:
 
 ## PostgreSQLのバージョンの指定
 > 本キットでは`postgres`を使用します。
-> MySQLなど、他のDBを使用する場合は置き換えて執筆してください。
+> MySQLなど、他のDBを使用する場合は置き換えて執筆してください。  
 > また、`Dockerfile`の内容はlaradockのバージョンで異なる場合があるので注意してください。
 >
 > ここから教材
@@ -222,7 +222,7 @@ $ docker-compose up -d workspace php-fpm nginx postgres
 |---|---|
 |docker-compose|複数のコンテナを同時に取り扱うDocker Composeという機能を使うためのコマンド|
 |up|Docker Composeでコンテナを起動するときに使うコマンド|
-|-d|コンテナをバックグランドで起動させるオプションで、起動後もターミナルの操作をおこなうことができます|
+|-d|コンテナをバックグランドで起動させるオプションで、起動後もターミナルの操作ができる|
 
 コマンドを実行すると、各コンテナのソフトウェア本体(Dockerイメージ)をダウンロードします。
 
