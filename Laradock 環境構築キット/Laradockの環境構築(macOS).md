@@ -81,9 +81,9 @@ $ cp env-example .env
 
 |設定|説明|
 |---|---|
-|APP_CODE_PATH_HOST|Laravelアプリケーションの場所を指定します|
-|DATA_PATH_HOST|データベースのデータの保存場所を指定します|
-|COMPOSE_PROJECT_NAME|コンテナ名のプレフィックス(先頭に付ける名前)を指定します|
+|APP_CODE_PATH_HOST|Laravelアプリケーションの場所を指定|
+|DATA_PATH_HOST|データベースのデータの保存場所を指定|
+|COMPOSE_PROJECT_NAME|コンテナ名のプレフィックス(先頭に付ける名前)を指定|
 
 コンテナとはDocker上で動くサービス(PHP, nginxなど)の単位のことです。
 
@@ -206,8 +206,8 @@ app-name
 |---|---|
 |workspace|Laravelでの開発に必要なツールを提供|
 |php-fpm|サーバー上でPHPを実行する仕組みを提供|
-|nginx|Webサーバーの一つ|
-|postgres|データベース管理システムの一つ|
+|nginx|Webサーバー|
+|postgres|データベース管理システム|
 
 それではDockerを使って開発環境を起動しましょう。
 
