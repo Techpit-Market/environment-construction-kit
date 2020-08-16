@@ -143,7 +143,7 @@ COMPOSE_PATH_SEPARATOR=:
 
 今回は`app-name/laravel-app-name`にLaravelアプリケーションを構築していくこととするので、`laradock`ディレクトリからの相対パスで指定します。
 
-`app-name/laravel-app-name`ディレクトリはまだありませんので、次以降ののパートで作成します。
+`app-name/laravel-app-name`ディレクトリはまだありませんので、次以降のパートで作成します。
 
 ```diff
 # Choose storage path on your machine. For all storage systems
@@ -188,8 +188,9 @@ app-name
 
 `Dockerfile`を開いたら、1行目を以下のように編集してください。
 
-```
-ARG POSTGRES_VERSION=11.6
+```diff
+- ARG POSTGRES_VERSION=alpine
++ ARG POSTGRES_VERSION=11.6
 ```
 
 `alpine`となっているところを`11.6`と編集してください。
@@ -199,9 +200,7 @@ ARG POSTGRES_VERSION=11.6
 >
 > ここから教材
 
-Docker上で動く各サービスの単位をコンテナと呼びます。
-
-今回、以下のコンテナを起動します。
+今回は以下のコンテナを起動します。
 
 |コンテナ|説明|
 |---|---|
