@@ -81,7 +81,6 @@ $ cp env-example .env
 
 |設定|説明|
 |---|---|
-|APP_CODE_PATH_HOST|Laravelアプリケーションの場所を指定|
 |DATA_PATH_HOST|データベースのデータの保存場所を指定|
 |COMPOSE_PROJECT_NAME|コンテナ名のプレフィックス(先頭に付ける名前)を指定|
 
@@ -97,8 +96,7 @@ $ cp env-example .env
 ### Paths #################################################
 
 # Point to the path of your applications code on your host
-- APP_CODE_PATH_HOST=../
-+ APP_CODE_PATH_HOST=../laravel-app-name
+APP_CODE_PATH_HOST=../
 
 # Point to where the `APP_CODE_PATH_HOST` should be in the container
 APP_CODE_PATH_CONTAINER=/var/www
@@ -134,16 +132,6 @@ COMPOSE_PATH_SEPARATOR=:
 ```
 
 編集した内容を説明します。
-
-```diff
-# Point to the path of your applications code on your host
-- APP_CODE_PATH_HOST=../
-+ APP_CODE_PATH_HOST=../app-name
-```
-
-今回は`app-name/laravel-app-name`にLaravelアプリケーションを構築していくこととするので、`laradock`ディレクトリからの相対パスで指定します。
-
-`app-name/laravel-app-name`ディレクトリはまだありませんので、次以降のパートで作成します。
 
 ```diff
 # Choose storage path on your machine. For all storage systems
@@ -250,3 +238,104 @@ Creating laravel-ci_porstgres_1        ... done
 `404 Not Found`とエラーが表示されますが、Dockerで開発環境が起動できたことは分かりますので、現時点では問題ありません。
 
 以上で、Laradockのインストールは完了です。
+
+## Laravelのインストール
+
+Laradockのインストールが完了したら、続いてLaravelのインストールをおこないます。
+
+最初にworkspaceに入ります。
+
+```
+$ docker-compose exec workspace /bin/bash
+```
+
+以下のように表示され、workspace内でコマンドが実行できるようになります。
+
+```
+root@071c6db8cc60:/var/www#
+```
+
+次にLaravelをインストールします。以下のコマンドを実行してください。
+
+```
+# composer create-project laravel/laravel laravel-app-name
+```
+
+コマンドの意味は以下の通りです。
+
+|コマンド|説明|
+|---|---|
+|composer|ライブラリの管理ツールであるcomposerを使うためのコマンド|
+|create-project {パッケージ} {ディレクトリ}|指定したパッケージを指定したディレクトリへインストールするためのコマンド|
+
+最後に以下のようなメッセージが出力されれば、インストール完了です。
+
+```
+Package manifest generated successfully.
+48 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+> @php artisan key:generate --ansi
+Application key set successfully.
+```
+
+Laravelのインストールが完了したら、workspaceを抜けます。以下のコマンドを実行してください。
+
+```
+# exit
+```
+
+次に`.env`を編集し、先程インストールしたLaravelアプリケーションの場所を指定します。
+
+エディタを使用して`.env`を開き、以下のように編集してください。
+
+```diff
+###########################################################
+###################### General Setup ######################
+###########################################################
+
+### Paths #################################################
+
+# Point to the path of your applications code on your host
+- APP_CODE_PATH_HOST=../
++ APP_CODE_PATH_HOST=../laravel-app-name
+
+(略)
+```
+
+編集した内容を説明します。
+
+```diff
+# Point to the path of your applications code on your host
+- APP_CODE_PATH_HOST=../
++ APP_CODE_PATH_HOST=../laravel-app-name
+```
+
+`APP_CODE_PATH_HOST`はLaravelアプリケーションの場所を指定します。
+
+今回はLaravelをインストールしたディレクトリである`laravel-app-name`を指定しました。
+
+`.env`を保存したら、もう一度Dockerを再起動します。
+
+`laradock`ディレクトリで以下のコマンドを実行してください。
+
+```
+$ docker-compose up -d workspace php-fpm nginx postgres
+```
+
+以下のメッセージが表示されたら、コンテナの起動は成功です。
+
+```
+Creating laravel-ci_docker-in-docker_1 ... done
+Creating laravel-ci_workspace_1        ... done
+Creating laravel-ci_php-fpm_1          ... done
+Creating laravel-ci_nginx_1            ... done
+Creating laravel-ci_porstgres_1        ... done
+```
+
+もし、この5つのメッセージが表示されなかったら、もう一度`docker-compose up -d workspace php-fpm nginx postgres`を実行してください。
+
+コンテナの再起動が完了したら、再度ブラウザでlocalhostにアクセスしてください。
+
+<img width="705" alt="" src="https://user-images.githubusercontent.com/25563739/91637183-8d24e280-ea41-11ea-8b6e-567d20f26c51.png">
+
+上記のような画面が表示がされたら、Laravelの開発環境の準備は完了です。
