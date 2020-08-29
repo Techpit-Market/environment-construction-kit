@@ -314,7 +314,7 @@ Laravelのインストールが完了したら、workspaceを抜けます。以�
 
 今回はLaravelをインストールしたディレクトリである`laravel-app-name`を指定しました。
 
-`.env`を保存したら、もう一度Dockerを再起動します。
+`.env`を保存したら、Dockerを再起動します。
 
 `laradock`ディレクトリで以下のコマンドを実行してください。
 
