@@ -1,10 +1,15 @@
-> ここではmacOSにおけるDocker Desctopのインストール方法を記載しています。
->
-> ここから教材
-# Docker Desctopのインストール（macOS）
-このパートでは、Dockerを使うことができるように、Docker Desctopのインストールをします。
+---
+title: "Docker Desktop のインストール(macOS)"
+emoji: "🐳"
+type: "template"
+---
+
+
+# Docker Desktopのインストール（macOS）
+このパートでは、Dockerを使うことができるように、Docker Desktopのインストールをします。
 
 もし既にお手元のPCにDocker Desktopがインストール済みであれば、このパートは読み飛ばしても大丈夫です。
+
 
 ## Docker Desktop for Macをダウンロード
 [Docker公式サイト](https://www.docker.com/)にアクセスしてください。
@@ -21,6 +26,7 @@
 
 <img width="890" alt="スクリーンショット 2020-09-18 6 53 31" src="https://user-images.githubusercontent.com/25563739/93790796-68054780-fc6e-11ea-8050-f8295d7da145.png">
 
+
 ## Docker Desktop for Macをインストール
 
 ダウンロードが完了したら、`Docker.dmg`ファイルを実行してください。
@@ -28,6 +34,7 @@
 以下のような画面が表示されるので、DockerアイコンをApplicationsディレクトリのアイコンへドラック&ドロップしてください。
 
 ![](https://i.gyazo.com/5701425273f0d6c9b574842e67cee80c.gif)
+
 
 ## Docker Desktop for Macを起動
 Finderからアプリケーションディレクトリを開き、Dockerを実行してください。
@@ -40,4 +47,4 @@ Macの画面右上部にDockerアイコンが表示されていれば、起動�
 
 ダウンロードした`Docker.dmg`ファイルは削除しても構いません。
 
-以上で、Dockerのインストールは完了です。
+以上で、Docker Desktopのインストールは完了です。
