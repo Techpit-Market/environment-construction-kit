@@ -3,128 +3,119 @@
 > ここから教材
 
 # 新規Railsプロジェクトの作成（Rails6）
-このパートからRailsでWebアプリケーションを作成していきます。Ruby on Railsの開発環境は構築出来ている前提で進めていきます。
+このパートからRailsでWebアプリケーションを作成していきます（Rails6の環境がある前提で解説します）。
 
 
-## 本パートの目標物
-本パートでは、ローカルサーバーを立ち上げてデフォルトのRailsページを表示するところまでやっていきます。
+## 本パートのゴール
+今回の目標は「ローカルサーバーを立ち上げて、Railsのデフォルトページを表示する」ことです。
 
-![image](https://i.gyazo.com/4893a86db8a9158919ee82803412d418.png)
+![image](https://i.gyazo.com/63fef1182934fdc07ffcbac00b03439c.png)
 
 
-## 目標物を作成するまでの流れ
-1. ローカルにインストールされているRailsのバージョンの確認
-2. 新規Railsアプリケーションの作成
-3. Gemのインストール
-4. ローカルサーバーを立ち上げる
-5. デフォルトのRailsページを表示
+## ゴールまでの流れ
+ゴールまでの手順は次のとおりです。
 
-では実際に進めてみましょう。
+1. ローカルにインストールされたRailsのバージョンを確認
+2. 新規Railsアプリケーションを作成
+3. 作成したディレクトリに移動
+4. ローカルサーバーを起動
+5. Railsのデフォルトページを表示
+
+それでは、実際にWebアプリケーションの作成を行いましょう。
 
 
 ## 1. ローカルにインストールされているRailsのバージョンの確認
-新規Railsアプリケーションを作成する前にローカルにインストールされているRailsのバージョンを確認しましょう。以下のコマンドをターミナル上で実行してください。
+新規Railsアプリケーションを作成する前に、ローカルにインストールされたRailsのバージョンを確認します。
 
+ターミナル上で、次のコマンドを入力してください。
+
+```console
+gem search ^rails$ -l
 ```
-$ gem search ^rails$ -l
-```
 
-すると下記のような結果が表示されます。
+コマンドを実行すると、次のような結果が表示されます。
 
-```
-$ gem search ^rails$ -l
-
+```console
+gem search ^rails$ -l
 
 *** LOCAL GEMS ***
 
-rails (6.0.2, 6.0.1, 5.2.4.1, 5.2.3, 5.2.2, 5.2.0, 5.1.6.1, 5.1.6)
+rails (6.0.3.4)
 ```
 
-上記の結果だと、Rails6.0.2やRails6.0.1がインストールされていることがわかります。このインストールされているバージョンを使ってRailsアプリケーションを作成しましょう。
+「Rails6.0.3.4」がインストールされていることがわかります。
+
+表示されたバージョンを使って、Railsアプリケーションを作成します。
 
 
 ## 2. 新規Railsアプリケーションの作成
-RailsでWebアプリケーションを新規作成するには、「rails new」コマンドを実行します。下記に実行例を示します。
+RailsでWebアプリケーションを新規作成します。
+
+Webアプリケーションの新規作成では、**rails newコマンド**を入力します。
+
+`rails new`コマンドでは命令文の最後に作成するアプリケーション名を指定します。
 
 **【例】**
 
-```
-$ rails new アプリケーション名
-```
-
-（**上記はあくまで実行例です。実際にコマンドを実行しないでください。**）
-
-今回は「app-name」というアプリケーション名で作成したいので下記のコマンドを実行してください。
-
-```
-$ rails _6.0.2_ new app-name
+```console
+rails new 作成するアプリケーション名
 ```
 
-> アプリ名は作成する教材に合わせて修正してください。
+今回はRails6.0.3.4を使って「**〇〇**」という名前のアプリケーションを作成します。
 
-`rails`と`new`の間にバージョンを記載することで、Railsのバージョンを指定できます。ここではローカルにインストールしているRailsのバージョンを指定してください。今回のカリキュラムでは5.2.3のバージョンを指定しています。
+次のコマンドを入力します。
 
-上記のコマンドで「app-name」というディレクトリ（フォルダ）が作成されました。「cd」コマンドを使って移動したいディレクトリに移動します。
+```console
+rails _6.0.3.4_ new 〇〇
+```
+
+> アプリ名は作成する教材に合わせて修正してください
+
+命令文の`rails`と`new`の間にRailsのバージョンを入力すると、Railsのバージョンを指定できます（ここではローカルにある6.0.3.4を指定）。
+
+`rails new`コマンドで「〇〇」というディレクトリ（フォルダ）が作成されました。
+
+
+## 3. 作成したディレクトリに移動する
+**cdコマンド**を使って、新たに作成した「〇〇」ディレクトリに移動します。
+
+ちなみに「cd」は、change directory（ディレクトリを移動する）の略です。
+
+ディレクトリ移動を行う命令文は、次の表現になります。
 
 **【例】**
 
-```
-$ cd 移動したいディレクトリ名
-```
-
-「cd」コマンドはchange directory（ディレクトリを移動する）の略です。今回はapp-nameというディレクトリに移動したいので下記のコマンドを実行します。
-
-```
-$ cd app-name
+```console
+cd 移動したいディレクトリ名
 ```
 
+今回は「〇〇」ディレクトリに移動するため、次のコマンドを入力します。
 
-## 3. Gemのインストール
-新規アプリケーションを作成したら、次にGemをインストールします。
-
-GemとはRuby用のライブラリを使うときに必要となるパッケージ管理ツールになります。
-
-Railsでは Gemを使うことでRubyのライブラリ（機能のまとまり）をインストールして、0から機能を作らずに、簡単にアプリケーション開発を行う事ができます。Gemの1つとして例えば、認証機能が作れる「Devise」というものがあります。
-
-ちなみにGemの正式名称は「RubyGems」です。Googleで検索するときも「RubyGems」とキーワード入力した方が、情報が探しやすくなります。
-
-参考）[RubyGems.org | your community gem host](https://rubygems.org/)
-
-それでは、Gemのインストールを行いましょう。以下のコマンドを実行してください。
-
-```
-$ bundle install
+```console
+cd 〇〇
 ```
 
-「bundle install」を実行すると、 Gemfileの内容に従いGemのインストールが行われます。（Gemfileはrails newコマンドでアプリケーションを作成したときに作成されます。）
+コマンドを実行すると、「〇〇」ディレクトリに移動します。
 
 
-## 4. ローカルサーバーを立ち上げる
-ローカルサーバーを立ち上げるには以下のコマンド実行すればサーバーが立ち上がります。
+## 4. ローカルサーバーを起動
+ローカルサーバーを立ち上げるには、次のコマンドを入力します。
 
+```console
+rails server
 ```
-$ bundle exec rails server
-```
 
-サーバーを起動させるコマンドは`rails server`に当たります。`rails s`と省略することもできます。
+コマンドを実行するとサーバーが起動します（`rails s`と省略することも可能）。
 
-`bundle exec`を先頭につけているのは、現在のプロジェクト（今回で言うとapp-name)のGemを指定するためです。
+うまくサーバーが起動すると、ターミナルで次のように表示されます。
 
-`bundle exec`に関してもっと詳しく知りたい方は以下のリンクを参考にしてください。
-
-参考）[bundle exec](https://bundler.io/v2.0/man/bundle-exec.1.html)
-
-うまくサーバーが起動している場合、ターミナルが下記のように表示されています。
-
-```
-$ bundle exec rails server
+```console
+rails server
 => Booting Puma
-=> Rails 6.0.2.2 application starting in development 
+=> Rails 6.0.3.2 application starting in development 
 => Run `rails server --help` for more startup options
-/Users/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.0.2.2/lib/action_dispatch/middleware/stack.rb:37: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
-/Users/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.0.2.2/lib/action_dispatch/middleware/static.rb:110: warning: The called method `initialize' is defined here
 Puma starting in single mode...
-* Version 4.3.3 (ruby 2.7.0-p0), codename: Mysterious Traveller
+* Version 4.3.5 (ruby 2.7.1-p83), codename: Mysterious Traveller
 * Min threads: 5, max threads: 5
 * Environment: development
 * Listening on tcp://127.0.0.1:3000
@@ -133,16 +124,16 @@ Use Ctrl-C to stop
 ```
 
 
-## 5. デフォルトのRailsページを表示
-サーバーを起動したら、ブラウザで http://localhost:3000/ にアクセスしてください。
+## 5. Railsのデフォルトページを表示
+ローカルサーバーを起動したら、ブラウザで「http://localhost:3000/ 」にアクセスします。
 
 **注意）** Cloud9の方はこちらのページを参考にデフォルトのRailsページを表示させてください。
 
 参考）[Cloud9でページを表示する方法（Rails）](https://qiita.com/daijiro_maeyama/private/51fe7517639f11d634d3)
 
-下記の画像のようにデフォルトのRailsページが表示されていれば、うまく動作しています。
+次の画像のようにRailsのデフォルトページが表示されていれば、うまく動作しています。
 
-![image](https://i.gyazo.com/4893a86db8a9158919ee82803412d418.png)
+![image](https://i.gyazo.com/63fef1182934fdc07ffcbac00b03439c.png)
 
 以上で今回のパートは終了です。
 

@@ -1,216 +1,331 @@
 > ここではmacOSにおけるRuby on Railsの環境構築方法を記載しています。対応バージョンは以下の通りです。
 >
-> - Ruby 2.7.0
-> - Rails 6.0.2
+> - Ruby 2.7.2
+>   - https://www.ruby-lang.org/ja/downloads/
+> - Rails 6.0.3.4
+>   - https://rubygems.org/gems/rails/versions
 >
 > ここから教材
 
+
 # Ruby on Railsの環境構築（macOS）
-Webアプリケーションを開発するための環境を構築します。
+Webアプリケーションを開発する環境を構築します。
 
-今回、環境構築するのは、Ruby on Railsです。
+今回は**Ruby on Rails 6**系の環境構築を行います。
 
-もし既にお手元のPCにRuby on Railsの環境があれば、このパートは読み飛ばしても大丈夫です。
+すでにRuby on Rails 6系の環境が用意されていれば、この回を読み飛ばしてもかまいません。
 
-**注意）今回のパートで環境構築する対応のPCはMacになります。**
+**（注：本教材での環境構築はMacで行っています）**
 
 
 ## Homebrewをインストール
-Homebrewとは、ソフトウェアの導入を単純化するmacOSのパッケージ管理システムです。
+ソフトウェアの導入を簡単にするため、macOS用のパッケージ管理システムである**Homebrew**をインストールします。
 
-下記のリンクからHomebrewをインストールします。
+次のリンク先からHomebrewをインストールします。
 
 [Homebrew](https://brew.sh/index_ja.html)
 
-上記のリンクにアクセスすると下記のような画面が表示されるので「インストール」と記載されているスクリプトをターミナル上で実行してください。
+リンク先にアクセスすると次のページが表示されます。
 
 ![image](https://i.gyazo.com/069a774cc3f47cab32d7bed52e9b9bbf.png)
 
-スクリプトを実行するとインストールが開始します。インストールには数分~10分程かかります。途中何度かパスワードを要求されるのでご自身のPCのパスワードを入力してください。
+「インストール」の見出しの下にあるスクリプトの行をmacOSのターミナルにコピー＆ペーストします。
+
+ターミナルで実行するとHomebrewのインストールが開始されます。
+
+インストールには数分~10分ほどかかります。途中で何度かパスワードを要求されるので、使用しているパソコンのパスワードを入力してください。
 
 
-## Homebrewがインストールされているか確認
-Homebrewをインストールしたら、Homebrewがインストールされているか確認します。以下のコマンドを実行してください。（コマンドを実行する際に`$`は含めないでください。行の頭に「$」を表示するスタイルを使って、その例がコマンドラインであることを示しています。）
+## Homebrewのインストールを確認
+Homebrewのインストール後に、無事にインストールされたかどうかを確認します。
 
+インストール後の確認は、ターミナルを起動して次のコマンドを入力します。
+
+```console
+brew -v
 ```
-$ brew -v
-Homebrew 2.1.16
-Homebrew/homebrew-core (git revision 1e525; last commit 2019-11-11)
-Homebrew/homebrew-cask (git revision 8767c; last commit 2019-11-11)
+
+入力をしたら`enter`キーを押して、コマンドを実行します。
+
+コマンドが実行されると、次のような画面になります。
+
+```console
+Homebrew 2.5.6
+Homebrew/homebrew-core (git revision 062ea; last commit 2020-10-14)
+Homebrew/homebrew-cask (git revision c25fe8; last commit 2020-10-14)
 ```
 
-上記のように`2.1.16`のようなバージョンが表示されればHomebrewはインストールされています。
+「Homebrew 2.5.6」とバージョンが表示され、Homebrewがインストールされたことが確認できました。
 
-（筆者のPCでは`2.1.16`と表示されていますが、インストールした時期によってバージョンは違います。なので`2.1.16`ではなく、`2.1.17`など別のバージョンが表示されることもありますが、バージョン(数字)が表示されていればインストールされています。)
+（執筆時は「2.5.6」と表示されましたが、「2.5.7」などと表示されると最新版がインストールされたことになります)
 
 
 ## rbenvをインストール
-rbenvをインストールします。rbenvをインストールすることでrubyのバージョンの切り替えが容易にできるようになります。 それでは下記のコマンドを実行してください。
+次に、Rubyのバージョンを簡単に切り替えられる**rbenv**をインストールします。
 
-```
-$ brew install rbenv
+それでは、ターミナルで次のコマンドを入力して実行してください。
+
+```console
+brew install rbenv
 ```
 
-上記のコマンドを実行したらrbenvがインストールされているか確認します。以下のコマンドを実行してバージョンの情報が表示されていればインストールされています。
+コマンドを実行後に、実際にrbenvがインストールされているかを確認します。
 
+次のコマンドを入力して、インストールしたrbenvのバージョンを確認します。
+
+```console
+rbenv --version
 ```
-$ rbenv --version
+
+コマンドを実行すると、次のようにバージョン情報が表示されます。
+
+```console
+rbenv --version
 rbenv 1.1.2
 ```
 
+この表示では「`rbenv 1.1.2`」とバージョン情報が表示されています。
+
+rbenvがインストールされたことを確認できました。
+
 
 ## rbenvにPATHを通す
-rbenvコマンドを利用するために、rbenvにPATHを通します。PATHを通すとは、コマンド実行ファイルを探しに行くパスを追加することです。
+rbenvコマンドを利用するために、rbenvに**PATHを通します**。
 
-参考）[PATHを通すとは？（Mac OS X）](https://qiita.com/soarflat/items/09be6ab9cd91d366bf71)
+「PATHを通す」とは、コマンドの実行ファイルの場所を確認するために指定することです。
 
-それでは、下記のコマンドを1つずつ実行してください。
+参考：[PATHを通すとは？（Mac OS X）](https://qiita.com/soarflat/items/09be6ab9cd91d366bf71)
 
+rbenvコマンドのPATHを通すために、次の3つのコマンドを用意しました。
+
+```console
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
 ```
-$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
-$ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
-$ source ~/.bash_profile
+
+これらのコマンドを１行ずつ入力して、実行します。
+
+まずは最初のコマンドです。
+
+スクリプトを`.bash_profile`に追加します。
+
+```console
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 ```
 
-`>> ~/.bash_profile`でスクリプトを`.bash_profile`に追加しています。
+`>> ~/.bash_profile`でスクリプトを`.bash_profile`に追加しました。
 
-また最後に`source`コマンドを使うことで`.bash_profile`に追加した内容を反映できます。
+
+次に、２番めのコマンドを入力して実行します。
+
+```console
+echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+```
+
+このコマンドを追加することで、ターミナル起動時にrbenvを自動的に起動させます。
+
+最後に、`source`というコマンドを使って追加した内容を反映します。
+
+```console
+source ~/.bash_profile
+```
+
+`.bash_profile`に追加した内容を反映できました。
+
+これでrbenvコマンドを利用するのに必要なPATHが通りました。
 
 
 ## Rubyをインストール
-まずRubyをインストールする前に、先ほどインストールしたrbenvを使ってインストール可能なrubyのバージョンを確認します。
+次に**Ruby**をインストールします。
 
-以下のコマンドを実行してください。
+Rubyをインストールする前に、インストールできるRubyのバージョンを確認します。
 
-```
-$ rbenv install -l
-```
+先ほどインストールしたrbenvを使って次のコマンドを入力してください。
 
-すると下記のようにrubyのインストール可能なバージョンの一覧が表示されます。
-
-```
-Available versions:
-  1.8.5-p52
-  1.8.5-p113
-  1.8.5-p114
-  ---中略---
-  2.5.1
-  2.5.2
-  2.5.3
-  2.5.4
-  2.5.5
-  2.5.6
-  2.5.7
-  2.6.0-dev
-  2.6.0-preview1
-  2.6.0-preview2
-  2.6.0-preview3
-  2.6.0-rc1
-  2.6.0-rc2
-  2.6.0
-  2.6.1
-  2.6.2
-  2.6.3
-  2.6.4
-  2.6.5
-  2.7.0-dev
-  2.7.0-preview1
-  2.7.0-preview2
-  2.7.0-preview3
-  2.7.0-rc1
-  2.7.0-rc2
-  2.7.0
-  2.8.0-dev
-  .
-  .
-  .
+```console
+rbenv install -l
 ```
 
-現在の最新のバージョンは2.7.0になるので、2.7.0のバージョンをインストールします。（2020年1月時点）
+コマンドを実行すると、最新の安定版のバージョンが一覧で表示されます。
 
-2.7.0のバージョンが表示されない場合は、rbenvとruby​​-buildを最新にアップグレードする必要があります。
+```console
+rbenv install -l
+2.5.8
+2.6.6
+2.7.2
+jruby-9.2.13.0
+maglev-1.0.0
+mruby-2.1.2
+rbx-5.0
+truffleruby-20.2.0
+truffleruby+graalvm-20.2.0
+
+Only latest stable releases for each Ruby implementation are shown.
+Use 'rbenv install --list-all' to show all local versions.
+```
+
+※ インストール可能なrubyのバージョンを全て表示するには、上記の実行結果にあるように`rbenv install --list-all`というコマンドを実行します
+
+バージョン番号を見ると、執筆時点（2020年10月）の安定版の最新バージョンは「2.7.2」なので、2.7.2をインストールします。
+
+参考：[Ruby ダウンロード](https://www.ruby-lang.org/ja/downloads/)
+
+もし最新バージョンが表示されない場合は、rbenvとruby​​-buildを最新版にする必要があります。
 
 参考：[rbenv Upgrading with Homebrew](https://github.com/rbenv/rbenv#upgrading-with-homebrew)
 
-それでは、以下のコマンドを実行してください。(インストール完了まで数分かかることがあります。)
+それでは、次のコマンドを入力してRuby 2.7.2をインストールします。
 
-```
-$ rbenv install 2.7.0
-```
-
-インストールが完了したら、PC（サーバー）内で共通に使うためにグローバルで利用するバージョンを設定します。
-
-```
-$ rbenv global 2.7.0
+```console
+rbenv install 2.7.2
 ```
 
-プロジェクトごとにRubyのバージョンを指定する場合は`global`ではなく`local`を使います。
+コマンドを実行するとインストールを開始します。インストール完了まで数分間かかることがあります。
 
-次にRubyのバージョン情報を確認します。
+これでRubyがインストールされました。
 
+
+## ローカルで使うRubyのバージョンを指定
+さらにローカルで使うRubyのバージョンを指定するために、以下のコマンドを実行します。
+
+```console
+rbenv local 2.7.2
 ```
-$ ruby -v
-ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-darwin19]
+
+これでローカルでRubyの2.7.1のバージョンが使用されます。
+
+このように`local`を使うと、プロジェクトごとにRubyのバージョンを指定できます。
+
+PC（サーバー）内で同じバージョンを共通して使う場合は、`local`ではなく`global`を使います。
+
+
+次に、Rubyのバージョン情報を確認します。次のコマンドを入力します。
+
+```console
+ruby -v
 ```
+
+コマンドを実行すると、次のようにバージョンが表示されます。
+
+```console
+ruby -v
+ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-darwin19]
+```
+
+指定した「2.7.2」と表示されました。これで指定したRubyのバージョンが確認できました。
 
 
 ## Bundlerをインストール
-Bundlerとは、必要なGemとバージョンを正確に追跡およびインストールすることにより、Rubyプロジェクトに一貫した環境を提供します。GemとはRuby用のライブラリを使うときに必要となるパッケージ管理ツールのことです。
+Rubyをインストールしたら、次に**Bundler**をインストールします。
 
-参考）
+Rubyでは**Gem**というライブラリを使いパッケージを管理しています。
+
+Gemコマンドで簡単にインストールやアンインストールができますが、複数のGemを使うとGem同士で依存関係が生まれ、バージョン違いによる不具合が出てきます。
+
+そこで、BundlerでGemのそれぞれのバージョンを正確に追跡し管理して、Rubyプロジェクトに一貫した環境を提供します。
+
+参考：
 - [Bundler](https://bundler.io/)
 - [RubyGems](https://rubygems.org/)
 
-それではBundlerをインストールしましょう。以下のコマンドを実行してください。
+それではBundlerをインストールしましょう。以下のコマンドを入力します。
 
-```
-$ gem install bundler
-```
-
-上記のコマンドを実行したらbundlerのバージョンを確認します。バージョン情報が表示されていればインストールされています。
-
-```
-$ bundler -v
-Bundler version 1.17.2
+```console
+gem install bundler
 ```
 
+コマンドを実行するとインストールが始まります。
 
-## yarn をインストール
-yarnとは、JavaScriptのライブラリを使うときに必要になるパッケージマネージャです。
+インストールされたBlundlerのバージョンを確認しましょう。
 
-Rails6では、WebpackerがデフォルトのJavaScriptのコンパイラになるため、yarnが必要になります。yarnと似たようなパッケージマネージャにnpmがありますが、Railsは標準でyarnを利用しているため今回はそれに準拠してyarnをインストールします。
+次のコマンドを入力します。
 
-それでは、yarnのインストールを行いましょう。以下のコマンドを実行してください。
-
-```
-$ brew install yarn
+```console
+bundler -v
 ```
 
-yarnをインストールすることで、yarnコマンドを使うことができます。
+コマンドの実行後、次のように表示されます。
 
-上記のコマンドを実行したらyarnがインストールされているか確認します。以下のコマンドを実行してバージョンの情報が表示されていればインストールされています。
+```console
+bundler -v
+Bundler version 2.1.4
+```
 
+「version 2.1.4」とバージョン情報が表示されました。
+
+これでBlundlerがインストール済みであることを確認できました。
+
+
+## yarnをインストール
+次に**yarn**をインストールします。
+
+yarnはJavaScriptのライブラリの利用に必要なパッケージマネージャです。
+
+yarnと互換性のあるnpmというパッケージマネージャもあります。しかし、Rails6ではWebpackerが標準になったことにより、yarnが必要です。
+
+それでは、yarnのインストールを行いましょう。
+
+次のコマンドを入力します。
+
+```console
+brew install yarn
 ```
-$ yarn -v
-1.19.1
+
+Homebrewのコマンドを実行すると、yarnがインストールされます。
+
+yarnが実際にインストールされたかを確認するために、次のコマンドを入力します。
+
+```console
+yarn -v
 ```
+
+コマンドを実行すると、次のように表示されます。
+
+```console
+yarn -v
+1.16.0
+```
+
+ここでは「`1.16.0`」と表示されました。バージョン情報が表示されていれば、yarnがインストールされたことが確認できます。
 
 
 ## Railsをインストール
-最後にRailsをインストールします。以下のコマンドを実行してください。(インストール完了まで数分かかることがあります。)
+いよいよ、Railsをインストールします。
 
-```
-$ gem install rails -v 6.0.2
+Railsのインストール時に「`-v バージョン番号`」とバージョンを指定してインストールできます。
+
+今回はバージョン「`6.0.3.4`」をインストールします。
+
+参考：[railsの全バージョン履歴](https://rubygems.org/gems/rails/versions)
+
+次のコマンドを入力します。
+
+```console
+gem install rails -v 6.0.3.4
 ```
 
-`-v バージョン`を記載することでバージョンを指定してRailsをインストールできます。今回の場合`6.0.2`のバージョンをインストールしています。
+コマンドを実行すると、インストールを開始します。インストールの完了までに数分かかることがあります。
 
-実行ができたら以下のコマンドでRailsのバージョンを確認します。
 
+## Railsのバージョンを確認
+
+Railsをインストールしたら、Railsのバージョンを確認するために次のコマンドを入力します。
+
+```console
+rails -v
 ```
-$ rails -v
-Rails 6.0.2
+
+コマンドを実行すると、次の画面が表示されます。
+
+```console
+rails -v
+Rails 6.0.3.4
 ```
+
+「`Rails 6.0.3.4`」と表示されました。
+
+これで無事にRuby on Railsのインストールが完了しました。
 
 以上でRuby on Railsをインストールできました。
 
