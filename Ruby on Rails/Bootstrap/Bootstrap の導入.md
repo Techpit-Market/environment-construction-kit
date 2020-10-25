@@ -8,9 +8,7 @@ Bootstrapは有名なWebフレームワークで、CSSを細かく指定せず�
 
 
 ## 本パートのゴール
-今回の目標は、
-
-本パートでは、下記の画像のように青色のボタンを表示するところまで実装していきます。
+今回の目標は、Bootstrapを導入して下記の画像のように青色のボタンを表示するところまで実装していきます。
 
 ![image](https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:2500/https://www.filepicker.io/api/file/j2Ntm0ovQcK99BjoDgh1)
 
@@ -41,7 +39,7 @@ webpackとはモジュールバンドラツールのことで、昨今のモダ�
 ※ 本教材では、webpackについては詳しく解説していません。詳しく解説しようとすると、webpackだけで1つの教材ができるくらいボリュームがあるためです。そのため詳しく学びたい方はご自身で調べていただければと思います
 
 
-## 2. jQueryとBootstrapをWebpackerで導入
+## 2. BootstrapをWebpackerで導入
 Webpakcerをインストールするには、まず`Gemfile`に以下のコードを追加します。ただ先ほど説明した通り、Rails5.1以降標準でサポートされているため、デフォルトでGemが追加されています。
 
 一応Gemfileを確認してみましょう。
