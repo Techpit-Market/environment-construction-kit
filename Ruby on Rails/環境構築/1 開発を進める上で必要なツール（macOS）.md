@@ -108,9 +108,6 @@ Visual Studio Codeで開発しやすくするため、さらに**拡張機能**�
 ● Ruby
   → VSCodeに対するRuby言語とデバッグサポートを提供する。
 
-● Vetur
-  → VSCode用のVueのツール。.vueファイルのシンタックスハイライトへの対応などさまざまな機能を提供する。
-
 ● Japanese Language Pack for Visual Studio Code
   → 日本語対応のVSCodeのUIを提供する。
 
