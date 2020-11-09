@@ -100,8 +100,8 @@ rbenvコマンドのPATHを通すために、次の3つのコマンドを用意�
 
 ```console
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+source ~/.bash_profile
 ```
 
 これらのコマンドを１行ずつ入力して、実行します。
