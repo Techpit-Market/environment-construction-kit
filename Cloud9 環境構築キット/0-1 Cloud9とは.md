@@ -1,13 +1,15 @@
-# Cloud9とは
+## Cloud9とは
 
-Cloud9はAWS(Amazon Web Service)が提供している統合開発環境、または IDE です。
+Cloud9はAWS(Amazon Web Service)が提供している**統合開発環境**、または**IDE**です。
 
-Microsoftが提供しているVisual Studioや、IBMが提供しているEclipseなどが有名です。
+他のIDEだと、Microsoftが提供しているVisual Studioや、IBMが提供しているEclipseなどが有名です。
 
 Cloud9の大きな特徴としては、ブラウザ上で操作するので、MacやWindows等の環境に依存せずに開発を進めることができます。
 
-JavaScript、Python、PHP、Ruby、Go、C++ などの実行環境が整っているため、基本的な環境構築を行わずに開発を開始することができます。
+Node.js、JavaScript、Python、PHP、Ruby、Go、C++ などのツールがあらかじめパッケージ化されているため、基本的な設定を行わずに開発を進めることができます。
 
-## AWS Cloud9 の仕組み
+Cloud9は完全従量課金での利用になりますが、1年間は無料で利用することができます。
 
-## AWS Cloud9 の機能
+利用料金の詳細については「**注意事項**」に記載しておりますので、そちらを参考にしてください。
+
+
