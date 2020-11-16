@@ -66,3 +66,7 @@
 以下の画像のように「TechpitFile.txt」がなくなっていればファイルが削除されています。
 
 ![new_folder](asset/new_folder.png)
+
+以上でCloud9の基本操作は終わりです。
+
+
