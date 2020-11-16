@@ -8,6 +8,8 @@ Cloud9の大きな特徴としては、ブラウザ上で操作するので、Ma
 
 また、Node.js、JavaScript、Python、PHP、Ruby、Go、C++ などのツールがあらかじめパッケージ化されているため、基本的な設定を行わずに開発を進めることができます。
 
+※詳細な言語サポートに関しては[AWS公式サイト](https://docs.aws.amazon.com/ja_jp/cloud9/latest/user-guide/language-support.html)をご覧ください。
+
 Cloud9は完全従量課金での利用になりますが、1年間は無料で利用することができます。
 
 利用料金の詳細については「**注意事項**」に記載しておりますので、そちらを参考にしてください。
