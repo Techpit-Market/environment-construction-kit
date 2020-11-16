@@ -104,7 +104,53 @@ AWSのサービスは利用したサービス料に応じて課金されてい�
 
 それでは、実際にCloud9を起動してみましょう。
 
-### VPCの設定
+以下の画面から「**ルートユーザー**」としてサインインします。
 
-Cloud9はVPCを利用しています。
+パスワードには先ほど登録したパスワードを入力しましょう。
 
+![image7](asset/sign_in.png)
+
+するとコンソールが開きます。
+
+![image8](asset/console.png)
+
+「**サービスを検索する**」の欄に「**Cloud9**」と入力して、クリックしてください。
+
+![image9](asset/console_cloud9.png)
+
+以下のような画面が表示されます。
+
+「**Create enviroment**」をクリックします。
+
+![image9](asset/create_env.png)
+
+以下のような画面が表示されるので、「**Name**」の部分に名前を入力しましょう。
+
+ここでは`sample`としています。
+
+![image10](asset/step1.png)
+
+名前の入力が終わったら、「**Next step**」をクリックします。
+
+すると、以下のような画面が表示されます。
+
+特に設定は変更せずデフォルトの設定のまま進めましょう。
+
+- Environment type: Create a new EC2 instance for environment (direct access)
+- Instance type: t2.micro (1 GiB RAM + 1 vCPU)
+- Platform: Amazon Linux
+- Cost-saving setting: After 30 minutes(default)
+
+![image11](asset/step2.png)
+
+「**Next step**」をクリックして次の画面に進みます。
+
+以下のような画面が表示されるので、内容を確認の上、「**Create enviroment**」をクリックします。
+
+![image12](asset/step3.png)
+
+以下のように表示されれば、Cloud9のセットアップは完了です！
+
+![image13](asset/cloud9.png)
+
+次のパートでは、簡単なCloud9の使い方について説明していきます。
