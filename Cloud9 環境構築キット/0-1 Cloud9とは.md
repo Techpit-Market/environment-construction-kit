@@ -21,7 +21,8 @@ Cloud9は完全従量課金での利用になりますが、1年間は無料で�
 既に作成をしたことがある方は、**Cloud9のセットアップ**まで読み飛ばしてください。
 
 以下のURLにアクセスしてください。
-![AWSアカウント作成](https://aws.amazon.com/jp/register-flow/)
+
+[AWSアカウント作成](https://aws.amazon.com/jp/register-flow/)
 
 以下のような画面が表示されるので、「**今すぐ無料サインアップ**」をクリックしてください。
 
