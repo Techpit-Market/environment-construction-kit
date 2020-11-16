@@ -133,7 +133,7 @@ Visual Studio Codeで開発しやすくするため、さらに**拡張機能**�
 
 これでRubyがインストールできました。
 
-同じ方法で、「Vetur」「Japanese Language Pack for Visual Studio Code」「vscode-icons」を検索して、それぞれインストールをしてください。
+同じ方法で、「Japanese Language Pack for Visual Studio Code」「vscode-icons」を検索して、それぞれインストールをしてください。
 
 4つの拡張機能のインストールができたら、VSCodeを**再起動**します。VSCodeが再起動されると拡張機能が使えるようになります。
 
