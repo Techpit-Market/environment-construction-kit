@@ -136,13 +136,6 @@ AWSのサービスは利用したサービス料に応じて課金されてい�
 
 特に設定は変更せずデフォルトの設定のまま進めましょう。
 
-|||
-|:----|:----|
-| Environment type | Create a new EC2 instance for environment (direct access) |
-| Instance type | t2.micro (1 GiB RAM + 1 vCPU) |
-| Platform | Amazon Linux |
-| Cost-saving setting | After 30 minutes(default) |
-
 ![image11](asset/step2.png)
 
 「**Next step**」をクリックして次の画面に進みます。
