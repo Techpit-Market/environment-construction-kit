@@ -92,13 +92,13 @@ AWSのサービスは利用したサービス料に応じて課金されてい�
 
 この教材では最低限の機能しか使わないため、「**ベーシックプラン**」を選択して次に進みます。
 
-![image4](asset/support.png)
+![image4](asset/supprot.png)
 
 以下のような画面が表示されれば、正常にAWSアカウントが作成されています。
 
 数分以内にAWSからメールが届くので、届き次第「AWS マネジメントコンソールにお進みください」をクリックしてCloud9のセットアップに進みましょう。
 
-![image4](asset/complete.account.png)
+![image4](asset/complete.accout.png)
 
 ### Cloud9のセットアップ
 
