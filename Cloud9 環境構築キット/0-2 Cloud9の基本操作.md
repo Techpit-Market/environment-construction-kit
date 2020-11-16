@@ -62,3 +62,7 @@
 確認を求められたら「Yes」をクリックしましょう。
 
 ![delete](asset/delete.png)
+
+以下の画像のように「TechpitFile.txt」がなくなっていればファイルが削除されています。
+
+![new_folder](asset/new_folder.png)
