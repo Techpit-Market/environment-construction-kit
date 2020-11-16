@@ -37,11 +37,11 @@
 
 以下のように「Techpit」というフォルダーが作られているのがわかるかと思います。
 
-![new_folder](asset/new_folde.png)
+![new_folder](asset/new_folder.png)
 
 次に「Techpit」フォルダーの中に、新しいファイルを作成しましょう。
 
-「Techpit」フォルダーを右クリックして、「**New File**」をクリックしましょう。
+「Techpit」フォルダーを右クリックして、「**New File**」をクリックします。
 
 ![new](asset/new.png)
 
