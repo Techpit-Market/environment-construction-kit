@@ -82,11 +82,11 @@ AWSのサービスは利用したサービス料に応じて課金されてい�
 
 すると、4桁の認証コードが届くかと思いますので、認証コードを入力して「**コードの検証**」をクリックましょう。
 
-![image4](asset/veryfy.phone.png)
+![image4](asset/verify.number.png)
 
 以下のような画面が表示されれば、本人確認は完了です。「**続行**」をクリックして次に進みます。
 
-![image4](asset/veryfy.number.png)
+![image4](asset/verify.ok.png)
 
 以下のような画面が表示されます。
 
