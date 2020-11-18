@@ -122,11 +122,11 @@ AWSのサービスは利用したサービス料に応じて課金されてい�
 
 以下のような画面が表示されます。
 
-「**Create enviroment**」をクリックします。
+「**Create enviroment**」をクリックしましょう。
 
 ![image9](asset/create_env.png)
 
-以下のような画面が表示されるので、「**Name**」の部分に名前を入力しましょう。
+以下のような画面が表示されるので、「**Name**」の部分に任意の名前を入力しましょう。ここでつけた名前が環境の名前になります。
 
 ここでは`sample`としています。
 
@@ -136,9 +136,22 @@ AWSのサービスは利用したサービス料に応じて課金されてい�
 
 すると、以下のような画面が表示されます。
 
-特に設定は変更せずデフォルトの設定のまま進めましょう。
-
 ![image11](asset/step2.png)
+
+「**Network settings (advanced)**」の部分をクリックしてください。
+
+![Cloud9_VPC](asset/Cloud9_VPC.png)
+
+上記の画像のように、「**Network (VPC)** 」にデフォルトの値が設定されていることを確認してください。
+
+※Network (VPC)に値が表示されない場合は別途VPCの設定を行う必要があります。この先のパートの「注意事項」の「VPCの設定」を参考にして設定を行ってください。
+
+今回は特に設定は変更せずデフォルトの設定のまま進めましょう。
+
+設定の詳細は公式サイトを参考にしてください。
+
+[AWS Cloud9公式]https://docs.aws.amazon.com/ja_jp/cloud9/latest/user-guide/tutorial-create-environment.html
+
 
 「**Next step**」をクリックして次の画面に進みます。
 
