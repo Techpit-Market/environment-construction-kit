@@ -22,7 +22,7 @@ $ php -v
 ```
 
 以下のように数字が表示されます。
-ここではPHPの環境が「**5.6.40**」であることがわかります。
+ここではPHPのバージョンが「**5.6.40**」であることがわかります。
 
 Cloud9のPHPのバージョンが本教材のバージョンと同じであれば、「**Laravelのバージョンを確認する**」まで読み飛ばしてください。
 
@@ -36,183 +36,167 @@ Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
 
 ### PHPのバージョンを変更する
 
-それではここからRubyのバージョンを変更していきます。
+それではここからPHPのバージョンを変更していきます。
 
-Rubyのバージョン管理ツールであるrvmを使います。
->ここから
+Linuxのパッケージ管理ツールである`yum`を使います。
 
-以下のコマンドでインストール済みのRubyのバージョンを確認します。
+以下のコマンドでパッケージをアップデートします。
 
 ```bash
 $ sudo yum -y update
 ```
 
-以下のコマンドでインストール可能なRubyのバージョンを一覧表示します。
-
 ```bash
-rvm list known
-```
-
-実行結果で、自分のインストールしたいバージョンがあることを確認してください。
-
-```bash
-rvm list known
+$ sudo yum -y update
 
 //====略====
+Updated:
+  containerd.x86_64 0:1.4.1-1.5.amzn1                     docker.x86_64 0:19.03.13ce-1.62.amzn1    
+  runc.x86_64 0:1.0.0-0.1.20200826.gitff819c7.2.amzn1    
 
-# MRI Rubies
-[ruby-]1.8.6[-p420]
-[ruby-]1.8.7[-head] # security released on head
-[ruby-]1.9.1[-p431]
-[ruby-]1.9.2[-p330]
-[ruby-]1.9.3[-p551]
-[ruby-]2.0.0[-p648]
-[ruby-]2.1[.10]
-[ruby-]2.2[.10]
-[ruby-]2.3[.8]
-[ruby-]2.4[.6]
-[ruby-]2.5[.5]
-[ruby-]2.6[.3]
-ruby-head
+Complete!
+```
+
+以下のコマンドでデフォルトでインストールされていたバージョンをアンインストールします。
+
+バージョン5.6が入っていたので、`php56`としていますが、「**PHPのバージョンを確認する**」で表示されたバージョンを指定しましょう。
+
+```bash
+$ sudo yum remove php56*
+```
+
+途中、`Is this ok [y/N]`と表示されるので、「y」を入力して「Enter」をクリックします。
+
+
+以下のように表示されていれば正常にアンインストールされています。
+
+```bash
+$ sudo yum remove php56*
 
 //====略====
+Dependency Removed:
+  php-pear.noarch 1:1.10.1-1.19.amzn1                                                              
 
+Complete!
 ```
 
-次に、以下のコマンドを実行してRubyのバージョンをインストールします。
+次にインストールしたいPHPのバージョンをインストールしていきます。
 
-`<version>`の部分には、インストールするバージョンを指定してください。
+ここでは、「PHP7.1」をインストールしているので、`php73`としています。各自必要なバージョンを指定するようにしてください。
 
 ```bash
-$ rvm install <version>
+$ sudo yum install php71*
 ```
 
-以下のように表示されれば正常にインストールされています。
+途中、`Is this ok Is this ok [y/d/N]`と表示されるので、「y」を入力して「Enter」をクリックします。
 
-ここでは`2.5.5`を指定しています。
+以下のように表示されていれば正常にインストールが完了しています。
 
 ```bash
-$ rvm install 2.5.5
-//===略===
-ruby-2.5.5 - #setup
-ruby-2.5.5 - #gemset created /home/ec2-user/.rvm/gems/ruby-2.5.5@global
-ruby-2.5.5 - #importing gemset /home/ec2-user/.rvm/gemsets/global.gems..................................
-ruby-2.5.5 - #generating global wrappers.......
-ruby-2.5.5 - #gemset created /home/ec2-user/.rvm/gems/ruby-2.5.5
-ruby-2.5.5 - #importing gemsetfile /home/ec2-user/.rvm/gemsets/default.gems evaluated to empty gem list
-ruby-2.5.5 - #generating default wrappers.......
+$ ysudo yum install php71*
+
+//====略====
+  pixman.x86_64 0:0.32.4-4.11.amzn1                                                                
+  postgresql8-libs.x86_64 0:8.4.20-5.52.amzn1                                                      
+  recode.x86_64 0:3.6-28.1.2.amzn1                                                                 
+  tokyocabinet.x86_64 0:1.4.33-6.4.amzn1                                                           
+  unixODBC.x86_64 0:2.2.14-14.7.amzn1                                                              
+  urw-fonts.noarch 0:2.4-10.7.amzn1                                                                
+
+Complete!
 ```
 
-以下のコマンドで使用するバージョンを指定しましょう。
+最後に、`/usr/bin/php`から元のバージョンへのリンクが張られているため、インストールしたバージョンにリンクを張り替えます。
 
 ```bash
-$ rvm use <version>
+$ sudo unlink /usr/bin/php
+$ sudo ln -s /etc/alternatives/php7 /usr/bin/php
 ```
 
 最後に以下のコマンドで、先ほど指定したバージョンが表示されることを確認してください。
 
 ```bash
-$ ruby -v
-ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux]
+$ php -v
+PHP 7.1.33 (cli) (built: Oct 31 2019 17:36:04) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies
+    with Zend OPcache v7.1.33, Copyright (c) 1999-2018, by Zend Technologies
+    with Xdebug v2.5.5, Copyright (c) 2002-2017, by Derick Rethans
 ```
 
-以上でRubyのバージョン変更は終了です。
+以上でPHPのバージョン変更は終了です。
 
-### Ruby on Railsのバージョンを確認する
+### Laravelをインストールする
 
-ここからはRailsのバージョンを確認していきます。
+ここからはLaravelのインストールを行っていきます。
 
-Cloud9のTerminalで以下のコマンドを実行してRailsのバージョンを確認しましょう。
+Laravelのインストールには**composer**というPHPのパッケージ管理システムを使っていきます。
+
+まずは以下のコマンドでcomporserをインストールしましょう。
 
 ```bash
-$ rails -v
+$ curl -sS https://getcomposer.org/installer | php
 ```
 
-以下のようにデフォルトで指定されるRailsのバージョンが表示されます。
+次にインストールしたcomporserを移動します。
 
 ```bash
-$ rails -v
-Rails 5.0.0
+$ sudo mv composer.phar /usr/local/bin/composer
 ```
 
-`rails new`を実行する際にバージョンを指定しないとこのバージョンでアプリケーションが作成されます。
-
-次に、インストールされているRailsのバージョンを確認しましょう。
-
-以下のコマンドを実行して下さい。
+composerがインストールされているか確認しましょう。以下のコマンドを実行して下さい。
 
 ```bash
-gem list rails
+$ composer
 ```
 
-以下のように表示されるので、**rails**の項目を確認しましょう。
-「5.0.7.2」「5.0.0」がインストールされていることがわかるかと思います。
+以下のように表示されていれば正常にインストールされています。
 
 ```bash
-gem list rails
+$ composer
+   ______
+  / ____/___  ____ ___  ____  ____  ________  _____
+ / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                    /_/
+Composer version 2.0.7 2020-11-13 17:31:06
 
-*** LOCAL GEMS ***
+//====略=====
+  validate             Validates a composer.json and composer.lock.
+  why                  Shows which packages cause the given package to be installed.
+  why-not              Shows which packages prevent the given package from being installed.
 
-coffee-rails (4.2.2)
-jquery-rails (4.4.0)
-rails (5.0.7.2, 5.0.0)
-rails-dom-testing (2.0.3)
-rails-html-sanitizer (1.3.0)
-sass-rails (5.0.7)
-sprockets-rails (3.2.2)
 ```
 
-ここで表示されているRailsのバージョンが本教材のRailsバージョンと同じであれば、このパートを読み飛ばしてください。
+それでは試しにLaravelのプロジェクトを作成してみましょう。
 
-
-### Ruby on Railsのバージョンをインストールする
-
-それではここからRailsのバージョンをインストールする方法を説明していきます。
-
-以下のコマンドでRailsのバージョンをインストールすることができます。
-
-`<version>`の部分には、インストールするバージョンを指定してください。
+今回はLaravel 5.2で「Techpit」というサンプルプロジェクトを作成してみます。以下のコマンドを実行して下さい。
 
 ```bash
-$ gem install rails -v <version>
+$ composer create-project "laravel/laravel=5.2.*" Techpit
 ```
 
-次のように表示されていれば正常にインストールが完了しています。
-以下の例では`6.0.0`を指定しています。
+最後に以下のコマンドを実行してサーバーを立ち上げてみましょう。
 
 ```bash
-$ gem install rails -v <version>
-
-//===略===
-
-Installing ri documentation for actionmailbox-6.0.0
-Parsing documentation for actiontext-6.0.0
-Installing ri documentation for actiontext-6.0.0
-Parsing documentation for railties-6.0.0
-Installing ri documentation for railties-6.0.0
-Parsing documentation for rails-6.0.0
-Installing ri documentation for rails-6.0.0
-Done installing documentation for zeitwerk, activesupport, erubi, actionview, actionpack, activemodel, activerecord, activejob, actionmailer, actioncable, mimemagic, marcel, activestorage, actionmailbox, actiontext, railties, rails after 13 seconds
-17 gems installed
+$ cd Techpit
+$ php artisan serve --port=8080
 ```
 
-最後に以下のコマンドで先ほどインストールしたRailsのバージョンが追加されていることを確認しましょう。
+プレビューを見るには、画面上部にある「**Preview**」ボタンをクリックし、「**Preview Running Application**」を選択します。
 
-```bash
-gem list rails
+![preview](asset/preview.png)
 
-*** LOCAL GEMS ***
+画面右下にスタート画面が表示されれば、Laravelプロジェクトは正しく作成されています。
 
-coffee-rails (4.2.2)
-jquery-rails (4.4.0)
-rails (6.0.0, 5.0.7.2, 5.0.0)
-rails-dom-testing (2.0.3)
-rails-html-sanitizer (1.3.0)
-sass-rails (5.0.7)
-sprockets-rails (3.2.2)
-```
+![laravel5](asset/laravel5.png)
 
-以上でRuby、Ruby on Railsのバージョンに関する説明は終わりです。
+以上でLaravelのインストールは終了です。
+
+ここで作成したファイル/フォルダは削除して構いません。
+
+※環境は削除しないでください。
 
 教材とバージョンが異なると、思わぬエラーが発生する場合があります。教材と同じバージョンで進めることを推奨しています。
 
