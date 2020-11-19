@@ -19,10 +19,12 @@ Cloud9上のTerminalを立ち上げて、以下のコマンドを実行してRub
 
 ```bash
 $ ruby -v
-``
+```
 
 以下のように数字が表示されます。
 ここではRubyの環境が「**2.6.3**」であることがわかります。
+
+Cloud9のRubyのバージョンが本教材のバージョンと同じであれば、「**Railsのバージョンを確認する**」まで読み飛ばしてください。
 
 ```bash
 $ ruby -v
@@ -112,6 +114,102 @@ ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux]
 
 以上でRubyのバージョン変更は終了です。
 
+### Ruby on Railsのバージョンを確認する
 
+ここからはRailsのバージョンを確認していきます。
+
+Cloud9のTerminalで以下のコマンドを実行してRailsのバージョンを確認しましょう。
+
+```bash
+$ rails -v
+```
+
+以下のようにデフォルトで指定されるRailsのバージョンが表示されます。
+
+```bash
+$ rails -v
+Rails 5.0.0
+```
+
+`rails new`を実行する際にバージョンを指定しないとこのバージョンでアプリケーションが作成されます。
+
+次に、インストールされているRailsのバージョンを確認しましょう。
+
+以下のコマンドを実行して下さい。
+
+```bash
+gem list rails
+```
+
+以下のように表示されるので、**rails**の項目を確認しましょう。
+「5.0.7.2」「5.0.0」がインストールされていることがわかるかと思います。
+
+```bash
+gem list rails
+
+*** LOCAL GEMS ***
+
+coffee-rails (4.2.2)
+jquery-rails (4.4.0)
+rails (5.0.7.2, 5.0.0)
+rails-dom-testing (2.0.3)
+rails-html-sanitizer (1.3.0)
+sass-rails (5.0.7)
+sprockets-rails (3.2.2)
+```
+
+ここで表示されているRailsのバージョンが本教材のRailsバージョンと同じであれば、このパートを読み飛ばしてください。
+
+
+### Ruby on Railsのバージョンをインストールする
+
+それではここからRailsのバージョンをインストールする方法を説明していきます。
+
+以下のコマンドでRailsのバージョンをインストールすることができます。
+
+`<version>`の部分には、インストールするバージョンを指定してください。
+
+```bash
+$ gem install rails -v <version>
+```
+
+次のように表示されていれば正常にインストールが完了しています。
+以下の例では`6.0.0`を指定しています。
+
+```bash
+$ gem install rails -v <version>
+
+//===略===
+
+Installing ri documentation for actionmailbox-6.0.0
+Parsing documentation for actiontext-6.0.0
+Installing ri documentation for actiontext-6.0.0
+Parsing documentation for railties-6.0.0
+Installing ri documentation for railties-6.0.0
+Parsing documentation for rails-6.0.0
+Installing ri documentation for rails-6.0.0
+Done installing documentation for zeitwerk, activesupport, erubi, actionview, actionpack, activemodel, activerecord, activejob, actionmailer, actioncable, mimemagic, marcel, activestorage, actionmailbox, actiontext, railties, rails after 13 seconds
+17 gems installed
+```
+
+最後に以下のコマンドで先ほどインストールしたRailsのバージョンが追加されていることを確認しましょう。
+
+```bash
+gem list rails
+
+*** LOCAL GEMS ***
+
+coffee-rails (4.2.2)
+jquery-rails (4.4.0)
+rails (6.0.0, 5.0.7.2, 5.0.0)
+rails-dom-testing (2.0.3)
+rails-html-sanitizer (1.3.0)
+sass-rails (5.0.7)
+sprockets-rails (3.2.2)
+```
+
+以上でRuby、Ruby on Railsのバージョンに関する説明は終わりです。
+
+教材とバージョンが異なると、思わぬエラーが発生する場合があります。教材と同じバージョンで進めることを推奨しています。
 
 
