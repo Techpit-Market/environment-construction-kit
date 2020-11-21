@@ -23,4 +23,4 @@ Ruby(Ruby on Rails)、PHP(Laravel)のバージョンの確認手順について�
 - PHP: 5.6.40 
 - Laravel: 未インストール
 - Node.js: 10.23.0
-- Python:3.6.12
+- Python: 3.6.12
