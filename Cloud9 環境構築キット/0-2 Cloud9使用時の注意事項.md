@@ -171,4 +171,37 @@ https://us-east-2.console.aws.amazon.com/console/
 
 ## トラブルシューティング
 
+### 教材内と異なる挙動があった場合
+
+Cloud9の動作が教材内の動作と異なる場合は、一度インスタンスを再起動しましょう。
+
+1. 以下のURLからコンソールにアクセスします。
+
+https://us-east-2.console.aws.amazon.com/console/
+
+2.「サービスを検索する」に「**EC2**」と入力して選択します。
+
+3. 「**実行中のインスタンス**」をクリックします。
+
+4. 該当のCloud9環境を選択して、「**インスタンスを再起動**」をクリックします。
+
+![restart](asset/restart.png)
+
+5. 再起動の確認画面が表示されるので、「**再起動**」をクリックしてください。
+
+以上でCloud9の再起動は完了です。
+
+
+### localhost:×××にアクセスしてもアプリケーションが表示されない場合
+
+Cloud9はAWS上で動いているため、localhostからアクセスすることはできません。
+
+アプリケーションが起動されている場合は、画面上部の「**Preview**」→「**Preview Running Application**」をクリックします。
+
+![preview1](asset/preview1.png)
+
+すると以下のように起動中のアプリケーションが表示されます。
+
+![preview3](asset/preview3.png)
+
 
