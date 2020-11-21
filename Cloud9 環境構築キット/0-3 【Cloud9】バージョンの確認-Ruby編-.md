@@ -74,6 +74,33 @@ ruby-head
 
 ```
 
+ここでインストールしたいバージョンがない場合は、rvmのアップグレードを行う必要があります。
+
+※教材執筆時点では、Ruby2.7がデフォルトのバージョンではインストールできなかったため、`rvm 1.29.10`をインストールします。
+
+以下のコマンドを実行して下さい。
+```bash
+$ rvm get 1.29.10
+```
+
+```bash
+$ rvm get 1.29.10
+//====略====
+Thanks for installing RVM 
+Please consider donating to our open collective to help us maintain RVM.
+
+  Donate: https://opencollective.com/rvm/donate
+
+
+RVM reloaded!
+```
+
+インストールしたrvmのバージョンを確認しましょう。
+```bash
+$ rvm -v
+rvm 1.29.10 (1.29.10) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+```
+
 次に、以下のコマンドを実行してRubyのバージョンをインストールします。
 
 `<version>`の部分には、インストールするバージョンを指定してください。
@@ -84,18 +111,15 @@ $ rvm install <version>
 
 以下のように表示されれば正常にインストールされています。
 
-ここでは`2.5.5`を指定しています。
+ここでは`2.7.0`を指定しています。
 
 ```bash
-$ rvm install 2.5.5
+$ rvm install 2.7.0
 //===略===
-ruby-2.5.5 - #setup
-ruby-2.5.5 - #gemset created /home/ec2-user/.rvm/gems/ruby-2.5.5@global
-ruby-2.5.5 - #importing gemset /home/ec2-user/.rvm/gemsets/global.gems..................................
-ruby-2.5.5 - #generating global wrappers.......
-ruby-2.5.5 - #gemset created /home/ec2-user/.rvm/gems/ruby-2.5.5
-ruby-2.5.5 - #importing gemsetfile /home/ec2-user/.rvm/gemsets/default.gems evaluated to empty gem list
-ruby-2.5.5 - #generating default wrappers.......
+ruby-2.7.0 - #generating global wrappers.......
+ruby-2.7.0 - #gemset created /home/ec2-user/.rvm/gems/ruby-2.7.0
+ruby-2.7.0 - #importing gemsetfile /home/ec2-user/.rvm/gemsets/default.gems evaluated to empty gem list
+ruby-2.7.0 - #generating default wrappers.......
 ```
 
 以下のコマンドで使用するバージョンを指定しましょう。
@@ -108,7 +132,7 @@ $ rvm use <version>
 
 ```bash
 $ ruby -v
-ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux]
+ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux]
 ```
 
 以上でRubyのバージョン変更は終了です。
