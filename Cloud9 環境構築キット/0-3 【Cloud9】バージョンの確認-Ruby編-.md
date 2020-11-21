@@ -45,13 +45,13 @@ $ rvm list
 以下のコマンドでインストール可能なRubyのバージョンを一覧表示します。
 
 ```bash
-rvm list known
+$ rvm list known
 ```
 
 実行結果で、自分のインストールしたいバージョンがあることを確認してください。
 
 ```bash
-rvm list known
+$ rvm list known
 
 //====略====
 
