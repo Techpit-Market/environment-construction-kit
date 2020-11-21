@@ -76,6 +76,7 @@ https://us-east-2.console.aws.amazon.com/console/
 以下のURL又は、ストアで「Authy」と検索してアプリをインストールしてください。
 
 iPhone: https://itunes.apple.com/us/app/authy/id494168017
+
 Android: https://play.google.com/store/apps/details?id=com.authy.authy
 
 ![authy](asset/authy.png)
