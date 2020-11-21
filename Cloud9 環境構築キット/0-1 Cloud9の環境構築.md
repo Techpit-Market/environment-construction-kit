@@ -1,4 +1,4 @@
-## Cloud9とは
+# Cloud9とは
 
 Cloud9はAWS(Amazon Web Service)が提供している**統合開発環境**、または**IDE**です。
 
