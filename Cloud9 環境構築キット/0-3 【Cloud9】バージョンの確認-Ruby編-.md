@@ -161,14 +161,14 @@ Rails 5.0.0
 以下のコマンドを実行して下さい。
 
 ```bash
-gem list rails
+$ gem list rails
 ```
 
 以下のように表示されるので、**rails**の項目を確認しましょう。
 「5.0.7.2」「5.0.0」がインストールされていることがわかるかと思います。
 
 ```bash
-gem list rails
+$ gem list rails
 
 *** LOCAL GEMS ***
 
@@ -218,7 +218,7 @@ Done installing documentation for zeitwerk, activesupport, erubi, actionview, ac
 最後に以下のコマンドで先ほどインストールしたRailsのバージョンが追加されていることを確認しましょう。
 
 ```bash
-gem list rails
+$ gem list rails
 
 *** LOCAL GEMS ***
 
