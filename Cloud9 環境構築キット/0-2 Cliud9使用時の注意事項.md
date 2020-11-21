@@ -162,6 +162,8 @@ https://us-east-2.console.aws.amazon.com/console/
 
 ![VPC_OK](asset/VPC_OK.png)
 
+右下の「**ok**」ボタンを選択して、次の画面に遷移したら、右上の「**VPCの作成**」をクリックします。
+
 **2. サブネットの作成**
 
 次にサブネットを作成していきます。
