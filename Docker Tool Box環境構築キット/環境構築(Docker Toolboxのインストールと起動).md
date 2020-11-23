@@ -1,14 +1,12 @@
-# 環境構築(Windows)
+# 環境構築(Windows10 Home)
 Windows10 Homeを使っている方向けの環境構築方法です。
 
 このパートではdockerをインストールした後に、起動確認までを行います。
 
 ## Windows10 HomeでDocker Toolboxをインストールする
-本教材で作るWebアプリケーションではdockerを使って、環境を作成して開発を行っていきます。
+本教材で作るWebアプリケーションではDockerを使って、環境を作成して開発を行っていきます。
 
-まずはDocker Toolboxをインストールして、`docker`コマンドと`docker-compose`コマンドを使えるようにしましょう。
-
-公式サイトのこちらから、ダウンロードします。
+公式サイトのこちらから、Docker Toolboxをダウンロードします。
 
 [docker.com](https://github.com/docker/toolbox/releases)
 
@@ -102,6 +100,25 @@ docker-compose version 1.24.1, build 4667896b
 ```
 
 ここまでで、dockerのインストールと起動確認は完了です。
+
+## Docker Toolbox使用時の注意点
+教材内でローカルサーバーからアプリケーションにアクセスする際、「http://localhost:8080/ にアクセスします。」という記載がありますが、Docker Toolboxでは`localhost`でローカルサーバーにアクセスできません。
+
+直接IPを指定する必要があります。
+
+IPアドレスを確認するには、Docker Quickstart Terminalで以下のコマンドを実行してください。
+
+```
+$ docker-machine ls
+```
+
+実行結果のURLの部分にIPアドレスが表示されます。ここでは、`192.168.99.100`が仮想マシンのIPアドレスです。
+```
+$ docker-machine ls
+NAME      ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER      ERRORS
+default   *        virtualbox   Running   tcp://192.168.99.100:2376           v19.03.12
+```
+
 
 ## トラブルシューティング
 
