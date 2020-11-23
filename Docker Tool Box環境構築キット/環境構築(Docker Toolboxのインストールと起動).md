@@ -93,7 +93,7 @@ docker-compose version 1.24.1, build 4667896b
 ここまでで、dockerのインストールと起動確認は完了です。
 
 ## Docker Toolbox使用時の注意点
-教材内でローカルサーバーからアプリケーションにアクセスする際、「http://localhost:8080/ にアクセスします。」という記載がありますが、Docker Toolboxでは`localhost`でローカルサーバーにアクセスできません。
+教材内でローカルサーバーからアプリケーションにアクセスする際、「http://localhost:8080/ にアクセスします」という記載がありますが、Docker Toolboxでは`localhost`でローカルサーバーにアクセスできません。
 
 直接IPを指定する必要があります。
 
