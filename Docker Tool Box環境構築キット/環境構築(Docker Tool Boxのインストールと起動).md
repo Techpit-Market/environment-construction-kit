@@ -10,9 +10,9 @@ Windows10 Homeを使っている方向けの環境構築方法です。
 
 公式サイトのこちらから、ダウンロードします。
 
-[docker.com](https://www.docker.com/get-started)
+[docker.com](https://github.com/docker/toolbox/releases)
 
-![image](https://i.gyazo.com/5db3f65dc8ec48eed5f762748d04cea4.png)
+![image](https://i.gyazo.com/7765dc96feda3746c2090023789856f9.png)
 
 ダウンロードしたファイルを開いてください。
 
