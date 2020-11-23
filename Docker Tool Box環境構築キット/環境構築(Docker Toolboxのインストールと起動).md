@@ -75,19 +75,17 @@ Start interactive shell
 
 起動が完了したら、`docker`コマンドと`docker-compose`コマンドが使えるか確認します。
 
-コマンドプロンプトを開いて、次のコマンドを実行してください。
-
-※起動方法やコマンド実行方法は *「0-8 ターミナル・コマンドプロンプト起動方法」* を確認してください。
+Docker Quickstart Terminalを開いて、次のコマンドを実行してください。
 
 ```
 $ docker -v
 ```
 
-dockerのバージョンが表示されました。
+以下のようにdockerのバージョンが表示されます。
 
 ```
 $ docker -v
-Docker version 19.03.12, build 48a66213fe
+Docker version 19.03.1, build 74b1e89e8a
 ```
 
 docker-composeコマンドも確認してみましょう、次のコマンドを実行してください。
@@ -100,7 +98,7 @@ docker-composeのバージョンが表示されました。
 
 ```
 $ docker-compose -v
-docker-compose version 1.27.2, build 18f557f9
+docker-compose version 1.24.1, build 4667896b
 ```
 
 ここまでで、dockerのインストールと起動確認は完了です。
