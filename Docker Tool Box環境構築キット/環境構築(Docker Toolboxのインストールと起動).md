@@ -110,6 +110,7 @@ NAME      ACTIVE   DRIVER       STATE     URL                         SWARM   DO
 default   *        virtualbox   Running   tcp://192.168.99.100:2376           v19.03.12
 ```
 
+「http://localhost:8080/ 」を「http://192.168.99.100:8080/ 」と読み替えて操作を行うようにしてください。
 
 ## トラブルシューティング
 
