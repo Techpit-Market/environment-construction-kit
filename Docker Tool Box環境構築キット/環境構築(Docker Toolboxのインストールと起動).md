@@ -31,19 +31,11 @@ https://github.com/docker/toolbox/releases
 
 以下の画面では、全てつにチェックを入れて「**Next**」を選択します。
 
-![image](https://gyazo.com/062e4c6834ec03807f01bca16ec4d2df)
+![image](https://gyazo.com/062e4c6834ec03807f01bca16ec4d2df.png)
 
 基本的な設定は以上です。「**install**」をクリックしましょう。
 
 ![image](https://gyazo.com/099fe9c9c7aaefc8b8b36fe998020384.png)
-
- デスクトップに「**Kitematic**」が作成されているので、ダブルクリックして起動しましょう。
- 
-Kitematicを初回起動した場合、Docker仮想マシンが作成されます。
-
-100%になるまで少し待ちましょう。
-
- ![image](https://gyazo.com/be491576b5b1b79e939ba5dc153e738a)
 
  デスクトップに「**Docker Quickstart Terminal**」が作成されているので、ダブルクリックして起動しましょう。
  
