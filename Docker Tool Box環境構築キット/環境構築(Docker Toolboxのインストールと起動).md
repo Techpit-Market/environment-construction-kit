@@ -1,14 +1,13 @@
 # 環境構築(Windows10 Home)
 Windows10 Homeを使っている方向けの環境構築方法です。
 
-このパートではdockerをインストールした後に、起動確認までを行います。
+このパートではDockerをインストールした後に、起動確認までを行います。
 
 ## Windows10 HomeでDocker Toolboxをインストールする
-本教材で作るWebアプリケーションではDockerを使って、環境を作成して開発を行っていきます。
 
-公式サイトのこちらから、Docker Toolboxをダウンロードします。
+以下のGitHubから、Docker Toolboxをダウンロードします。
 
-[docker.com](https://github.com/docker/toolbox/releases)
+https://github.com/docker/toolbox/releases
 
 ![image](https://gyazo.com/19b7bd18e13b64bad0658e9e6f896d30.png)
 
