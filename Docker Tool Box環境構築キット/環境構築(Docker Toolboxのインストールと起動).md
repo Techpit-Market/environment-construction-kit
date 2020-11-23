@@ -1,0 +1,85 @@
+# 環境構築(Windows)
+Windows10 Homeを使っている方向けの環境構築方法です。
+
+このパートではdockerをインストールした後に、起動確認までを行います。
+
+## Windows10 HomeでDocker Toolboxをインストールする
+本教材で作るWebアプリケーションではdockerを使って、環境を作成して開発を行っていきます。
+
+まずはDocker Toolboxをインストールして、`docker`コマンドと`docker-compose`コマンドを使えるようにしましょう。
+
+公式サイトのこちらから、ダウンロードします。
+
+[docker.com](https://github.com/docker/toolbox/releases)
+
+![image](https://gyazo.com/19b7bd18e13b64bad0658e9e6f896d30.png)
+
+教材執筆時点の最新バージョンが「v19.03.1」でしたので、「v19.03.1」をインストールします。
+
+「**DockerToolbox-19.03.1.exe**」をクリックして任意のフォルダにインストールしましょう。
+
+インストールが完了したら起動します。
+
+以下のような画面が表示されたら「**Next**」をクリックしてください。
+
+![image](https://gyazo.com/aa88559019dc2f710c1ce746f5cade67.png)
+
+インストールするフォルダを選択します。ここでは特に変更せずデフォルトのまま進めます。「**Next**」
+を選択してください。
+![image](https://gyazo.com/c5c3e2c15eeafc2782ca885e6594a5ac.png)
+
+「Git」をインストールしたことがない方は、「**Git for Windows**」にチェックをいれましょう。それ以外はデフォルトの設定で進めます。
+
+![image](https://gyazo.com/4a90d106273b7953b0400009093f91df.png)
+
+以下の画面では、全てつにチェックを入れて「**Next**」を選択します。
+
+![image](https://gyazo.com/062e4c6834ec03807f01bca16ec4d2df)
+
+基本的な設定は以上です。「**install**」をクリックしましょう。
+
+![image](https://gyazo.com/099fe9c9c7aaefc8b8b36fe998020384.png)
+
+ デスクトップに「**Kitematic**」が作成されているので、ダブルクリックして起動しましょう。
+ 
+Kitematicを初回起動した場合、Docker仮想マシンが作成されます。
+
+100%になるまで少し待ちましょう。
+
+ ![image](https://gyazo.com/be491576b5b1b79e939ba5dc153e738a)
+
+ デスクトップに「**Docker Quickstart Terminal**」が作成されているので、ダブルクリックして起動しましょう。
+
+## dockerコマンドとdocker-composeコマンドの確認
+
+起動が完了したら、`docker`コマンドと`docker-compose`コマンドが使えるか確認します。
+
+コマンドプロンプトを開いて、次のコマンドを実行してください。
+
+※起動方法やコマンド実行方法は *「0-8 ターミナル・コマンドプロンプト起動方法」* を確認してください。
+
+```
+$ docker -v
+```
+
+dockerのバージョンが表示されました。
+
+```
+$ docker -v
+Docker version 19.03.12, build 48a66213fe
+```
+
+docker-composeコマンドも確認してみましょう、次のコマンドを実行してください。
+
+```
+$ docker-compose -v
+```
+
+docker-composeのバージョンが表示されました。
+
+```
+$ docker-compose -v
+docker-compose version 1.27.2, build 18f557f9
+```
+
+ここまでで、dockerのインストールと起動確認は完了です。
