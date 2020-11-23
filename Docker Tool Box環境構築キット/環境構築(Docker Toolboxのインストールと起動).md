@@ -49,6 +49,27 @@ Kitematicを初回起動した場合、Docker仮想マシンが作成されま�
  ![image](https://gyazo.com/be491576b5b1b79e939ba5dc153e738a)
 
  デスクトップに「**Docker Quickstart Terminal**」が作成されているので、ダブルクリックして起動しましょう。
+ 
+ 初回の起動には少々時間がかかります。
+ 
+ 以下のような画面が表示されれればDocker Toolboxのインストールは完了です。
+ 
+ ```
+                        ##         .
+                  ## ## ##        ==
+               ## ## ## ## ##    ===
+           /"""""""""""""""""\___/ ===
+      ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~
+           \______ o           __/
+             \    \         __/
+              \____\_______/
+
+docker is configured to use the default machine with IP 192.168.99.100
+For help getting started, check out the docs at https://docs.docker.com
+
+
+Start interactive shell
+ ```
 
 ## dockerコマンドとdocker-composeコマンドの確認
 
@@ -83,3 +104,17 @@ docker-compose version 1.27.2, build 18f557f9
 ```
 
 ここまでで、dockerのインストールと起動確認は完了です。
+
+## トラブルシューティング
+
+Docker Quickstart Terminalを初回に起動した際に、以下のような画面が表示されることがあります。
+
+```
+(default) This is a known VirtualBox bug. Let's try to recover anyway...
+Error creating machine: Error in driver during machine creation: Error setting up host only network on machine start: The host-only adapter we just created is not visible. This is a well known VirtualBox bug. You might want to uninstall it and reinstall at least version 5.0.12 that is is supposed to fix this issue
+Looks like something went wrong in step ´Checking if machine default exists´... Press any key to continue...
+```
+
+このエラーはVirtualBoxのバージョンによるエラーですので、一度VirtualBoxをアンインストールし、以下のURLから、再度VirtualBoxだけインストールしなおしましょう。
+
+https://www.virtualbox.org/wiki/Downloads
