@@ -29,9 +29,9 @@ type: "template"
 
 ここからはWSL 2のインストールを行っていきます。
 
-1. `コマンドプロンプト`もしくは`PowerShell`を管理者権限で起動します
+### 1. `コマンドプロンプト`もしくは`PowerShell`を管理者権限で起動します
 
-2. Linux 用 Windows サブシステムを有効にする
+### 2. Linux 用 Windows サブシステムを有効にする
 
 ```shell
 $ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
@@ -50,7 +50,7 @@ $ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linu
 操作は正常に完了しました。
 ```
 
-3. 仮想マシンの機能を有効にする
+### 3. 仮想マシンの機能を有効にする
 
 ```shell
 $ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
@@ -71,7 +71,7 @@ $ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nor
 
 ここまでの設定が完了したら一度ＰＣを再起動しましょう。
 
-4. Linux カーネル更新プログラム パッケージをダウンロードする
+### 4. Linux カーネル更新プログラム パッケージをダウンロードする
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
 ダウロードが完了したら、ダブルクリックで起動します。
@@ -82,7 +82,7 @@ https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
 管理者特権のアクセス許可を求めるメッセージが表示されたら。[はい] を選択してください。
 
-5. WSL 2 を既定のバージョンとして設定する
+### 5. WSL 2 を既定のバージョンとして設定する
  `コマンドプロンプト`もしくは`PowerShell`を管理者権限で起動します。
 
  以下のコマンドでWSL 2 を既定のバージョンとして設定します。
@@ -96,7 +96,7 @@ $ wsl --set-default-version 2
 WSL 2 との主な違いについては、https://aka.ms/wsl2 を参照してください
  ```
 
-6. Linux ディストリビューションをインストール
+### 6. Linux ディストリビューションをインストール
 
 [Microsoft Store](https://aka.ms/wslstore)を開きます。
 
