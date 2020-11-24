@@ -1,51 +1,188 @@
 ---
-title: "Docker Desktop のインストール(macOS)"
+title: "Docker Desktop のインストール(Windows)"
 emoji: "🐳"
 type: "template"
 ---
 
 
-# Docker Desktopのインストール（macOS）
+# Docker Desktopのインストール（Windows）
 このパートでは、Dockerを使うことができるように、Docker Desktopのインストールをします。
 
 もし既にお手元のPCにDocker Desktopがインストール済みであれば、このパートは読み飛ばしても大丈夫です。
 
+また、お使いのWindowsの種類によって操作が異なります。該当の見出しまで進んでください、
 
-## Docker Desktop for Windowsをダウンロード
-[Docker公式サイト](https://www.docker.com/)にアクセスしてください。
+---
+Windows 10 Pro: Docker Desktop for Windowsをダウンロード
+Windows 10 Enterprise: Docker Desktop for Windowsをダウンロード
+Windows 10 Home バージョン2004,ビルド19041以上: Docker Desktop for Windowsをダウンロード
+上記以外:WSL 2のインストール
+---
 
-「Get Started」ボタンをクリックしてください。
+## WSL 2のインストール
 
-<img width="900" alt="スクリーンショット 2020-09-18 6 43 53" src="https://user-images.githubusercontent.com/25563739/93790586-2d9baa80-fc6e-11ea-8acc-6475181c3681.png">
+**WSL 2**のインストールにはWindowsをバージョン2004,ビルド19041以上にアップデートする必要があります。
 
-「Download for Mac」ボタンをクリックしてください。
+以下のURLからアップデートしましょう。
 
-<img width="800" alt="スクリーンショット 2020-09-18 6 46 27" src="https://user-images.githubusercontent.com/25563739/93790687-499f4c00-fc6e-11ea-8c95-804e011ce9f3.png">
+「Windows 10 October 2020 Update」以降のアップデートであれば問題ありません。※インストールには数時間かかる場合がございます。
 
-任意のディレクトリに保存してください。
+ここからはWSL 2のインストールを行っていきます。
 
-<img width="890" alt="スクリーンショット 2020-09-18 6 53 31" src="https://user-images.githubusercontent.com/25563739/93790796-68054780-fc6e-11ea-8050-f8295d7da145.png">
+1. `コマンドプロンプト`もしくは`PowerShell`を管理者権限で起動します
 
+2. Linux 用 Windows サブシステムを有効にする
 
-## Docker Desktop for Macをインストール
+```shell
+$ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
 
-ダウンロードが完了したら、`Docker.dmg`ファイルを実行してください。
+以下のように表示されれば正常に実行されています。
 
-以下のような画面が表示されるので、DockerアイコンをApplicationsディレクトリのアイコンへドラック&ドロップしてください。
+```shell
+$ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+バージョン: 10.0.19041.572
 
-![](https://i.gyazo.com/5701425273f0d6c9b574842e67cee80c.gif)
+イメージのバージョン: 10.0.19042.630
 
+機能を有効にしています
+[==========================100.0%==========================]
+操作は正常に完了しました。
+```
 
-## Docker Desktop for Macを起動
-Finderからアプリケーションディレクトリを開き、Dockerを実行してください。
+3. 仮想マシンの機能を有効にする
 
-<img width="817" alt="スクリーンショット 2020-09-22 0 45 47" src="https://user-images.githubusercontent.com/25563739/93790910-8703d980-fc6e-11ea-986f-58d61199baa6.png">
+```shell
+$ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
 
-Macの画面右上部にDockerアイコンが表示されていれば、起動完了です。
+```shell
+$ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 
-<img width="506" alt="スクリーンショット 2020-09-22 0 49 48" src="https://user-images.githubusercontent.com/25563739/93791047-b0246a00-fc6e-11ea-865d-291c87b11065.png">
+展開イメージのサービスと管理ツール
+バージョン: 10.0.19041.572
 
-ダウンロードした`Docker.dmg`ファイルは削除しても構いません。
+イメージのバージョン: 10.0.19042.630
 
-以上で、Docker Desktopのインストールは完了です。
+機能を有効にしています
+[==========================100.0%==========================]
+操作は正常に完了しました。
+```
 
+ここまでの設定が完了したら一度ＰＣを再起動しましょう。
+
+4. Linux カーネル更新プログラム パッケージをダウンロードする
+https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+
+ダウロードが完了したら、ダブルクリックで起動します。
+
+以下のような画面が表示されるので、「**Next**」をクリックしましょう。
+
+![image](https://i.gyazo.com/736f28d6f796ef11eed4b60901f22902.png)
+
+管理者特権のアクセス許可を求めるメッセージが表示されたら。[はい] を選択してください。
+
+5. WSL 2 を既定のバージョンとして設定する
+ `コマンドプロンプト`もしくは`PowerShell`を管理者権限で起動します。
+
+ 以下のコマンドでWSL 2 を既定のバージョンとして設定します。
+ ```shell
+$ wsl --set-default-version 2
+ ```
+
+以下のような文章が表示されます。
+  ```shell
+$ wsl --set-default-version 2
+WSL 2 との主な違いについては、https://aka.ms/wsl2 を参照してください
+ ```
+
+6. Linux ディストリビューションをインストール
+
+[Microsoft Store](https://aka.ms/wslstore)を開きます。
+
+右上の検索窓に「Ubuntu」と入力します。
+
+ここでは教材執筆時点で最新版の「Ubuntu 20.04 LTS」をインストールしていきます。
+
+※インストールには数分かかる場合があります。
+
+![image](https://i.gyazo.com/92176d7516f0cc404f0fda85a3deb46f.png)
+
+インストールが完了すると、「**起動**」ボタンが表示されるのでクリックしてください。
+
+![image](https://i.gyazo.com/e2b963279806bf4080b3c9296989a85e.png)
+
+Ubuntuのターミナルが立ち上がり、
+
+- ユーザーネーム
+- パスワード
+
+を設定します。このパスワードは忘れないようにしましょう。
+
+```ubuntu
+Installing, this may take a few minutes...
+Please create a default UNIX user account. The username does not need to match your Windows username.
+For more information visit: https://aka.ms/wslusers
+Enter new UNIX username: <任意のユーザーネーム>
+New password:<任意のパスワード>
+Retype new password:<パスワード再入力>
+```
+
+ `コマンドプロンプト`もしくは`PowerShell`で以下のコマンドを実行し、`Ubuntu`が起動していることを確認してください。
+
+```shell
+$ wsl --list --verbose
+  NAME            STATE           VERSION
+* Ubuntu-20.04    Running         2
+```
+
+WSL 2のインストールは以上になります。「Docker Desktop for Windowsのダウンロード」に進みましょう。
+
+## Docker Desktop for Windowsのダウンロード
+[Docker公式サイト](https://www.docker.com/products/docker-desktop)にアクセスしてください。
+
+「Download for Windows(stable)」を選択します。
+
+![image](https://gyazo.com/2b5cc7d3a239c267e9c3b19b327d0d7d)
+
+インストールが完了したら、ダブルクリックで起動します。
+
+以下のチェックボックスにはどちらもチェックを入れて「ok」をクリックします。
+
+![image](https://i.gyazo.com/c6f432b505c15ce058fef20907b79bb6.png)
+
+するとDockerのインストールが始まります。少々時間がかかる場合があります。
+
+![image](https://i.gyazo.com/3fe7857457d49bbc92db9262db6e7a7a.png)
+
+以下のような画面が表示されればインストールは完了です。「Close and log out」をクリックして、「Docker Desktop for Windowsを起動」に進みましょう。
+
+![image](https://i.gyazo.com/fbde4e91696293325e0bd1310c2d25ea.png)
+
+## Docker Desktop for Windowsを起動
+
+デスクトップに作成されている「Docker Desktop」をダブルクリックして起動します。
+
+「Start」をクリックします。
+
+![image](https://i.gyazo.com/ffd4008f74ec58cacded3faa1f911b7f.png)
+
+画面右側にコマンドを入力して、バージョンの確認を行います。
+
+![image](https://i.gyazo.com/b57ddde79bb32c6fe5d1208d7c065ad5.png)
+
+```shell
+$ docker -v
+$ docker-compose -v 
+```
+
+それぞれ以下のように表示されればDockerは正常に起動されています。
+
+```shell
+$ docker -v
+Docker version 19.03.13, build 4484c46d9d
+$ docker-compose -v 
+docker-compose version 1.27.4, build 40524192
+```
+
+以上でDocker Desktop for Windowsの環境構築は終了です。
