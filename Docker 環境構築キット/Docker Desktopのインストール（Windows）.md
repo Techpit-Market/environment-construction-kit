@@ -12,12 +12,12 @@ type: "template"
 
 また、お使いのWindowsの種類によって操作が異なります。該当の見出しまで進んでください、
 
----
-Windows 10 Pro: Docker Desktop for Windowsをダウンロード
-Windows 10 Enterprise: Docker Desktop for Windowsをダウンロード
-Windows 10 Home バージョン2004,ビルド19041以上: Docker Desktop for Windowsをダウンロード
-上記以外:WSL 2のインストール
----
+| 種類 | 環境構築手順 |
+|:---|:---|
+|Windows 10 Pro|Docker Desktop for Windowsをダウンロード|
+|Windows 10 Enterprise |Docker Desktop for Windowsをダウンロード |
+|Windows 10 Home バージョン2004,ビルド19041以上|Docker Desktop for Windowsをダウンロード|
+|上記以外|WSL 2のインストール→Docker Desktop for Windowsをダウンロード|
 
 ## WSL 2のインストール
 
