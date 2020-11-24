@@ -143,7 +143,7 @@ WSL 2のインストールは以上になります。「Docker Desktop for Windo
 
 「Download for Windows(stable)」を選択します。
 
-![image](https://gyazo.com/2b5cc7d3a239c267e9c3b19b327d0d7d)
+![image](https://gyazo.com/2b5cc7d3a239c267e9c3b19b327d0d7d.png)
 
 インストールが完了したら、ダブルクリックで起動します。
 
