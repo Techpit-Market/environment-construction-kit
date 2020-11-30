@@ -24,3 +24,7 @@ Ruby(Ruby on Rails)、PHP(Laravel)のバージョンの確認手順について�
 - Laravel: 未インストール
 - Node.js: 10.23.0
 - Python: 3.6.12
+
+## DBについて
+SQLiteがAmazon Linuxだと使えない場合があります。
+インストールするかCloud9を立ち上げる際に、`Ubuntu`を選択するようにしてください。
