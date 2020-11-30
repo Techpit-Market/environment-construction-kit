@@ -30,112 +30,168 @@ $ ruby -v
 ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]
 ```
 
-## Rubyのバージョンを変更する
+## Rubyのバージョン確認とインストール
 
-それではここからRubyのバージョンを変更していきます。
+それではここからRubyのインストールを行っていきます。
 
-Rubyのバージョン管理ツールであるrvmを使います。
+Cloud9にはデフォルトでRubyがインストールされていますが、バージョンが古い可能性があるため、併せて確認していきましょう。
+
+以下のコマンドを実行して、表示されるバージョンがこの教材と同じバージョンであればこのステップは不要です。**Bundlerをインストール**まで読み飛ばしてください。
+
+```bash
+ruby -v
+```
+
+### Homebrewのインストールを確認
+
+Cloud9にデフォルトでインストールされているパッケージ管理システム「**Homebrew**」を使用していきます。
 
 以下のコマンドでインストール済みのRubyのバージョンを確認します。
 
 ```bash
-$ rvm list
+$ brew -v
 ```
 
-以下のコマンドでインストール可能なRubyのバージョンを一覧表示します。
+コマンドが実行されると次のような画面になります。
+```bash
+$ brew -v
+Homebrew >=2.2.0 (shallow or no git repository)
+Homebrew/linuxbrew-core (git revision 09fd76; last commit 2020-11-06)
+```
+
+### rbenvをインストール
+
+次に、Rubyのバージョンを簡単に切り替えられる`rbenv`をインストールします。
 
 ```bash
-$ rvm list known
+$ brew install rbenv
 ```
 
-実行結果で、自分のインストールしたいバージョンがあることを確認してください。
+コマンドを実行後に、実際にrbenvがインストールされているかを確認します。
+
+次のコマンドを入力して、インストールしたrbenvのバージョンを確認します
 
 ```bash
-$ rvm list known
-
-//====略====
-
-# MRI Rubies
-[ruby-]1.8.6[-p420]
-[ruby-]1.8.7[-head] # security released on head
-[ruby-]1.9.1[-p431]
-[ruby-]1.9.2[-p330]
-[ruby-]1.9.3[-p551]
-[ruby-]2.0.0[-p648]
-[ruby-]2.1[.10]
-[ruby-]2.2[.10]
-[ruby-]2.3[.8]
-[ruby-]2.4[.6]
-[ruby-]2.5[.5]
-[ruby-]2.6[.3]
-ruby-head
-
-//====略====
-
+$ rbenv --version
 ```
 
-ここでインストールしたいバージョンがない場合は、rvmのアップグレードを行う必要があります。
-
-※教材執筆時点では、Ruby2.7がデフォルトのバージョンではインストールできなかったため、`rvm 1.29.10`をインストールします。
-
-以下のコマンドを実行して下さい。
-```bash
-$ rvm get 1.29.10
-```
+コマンドを実行すると、次のようにバージョン情報が表示されます。
 
 ```bash
-$ rvm get 1.29.10
-//====略====
-Thanks for installing RVM 
-Please consider donating to our open collective to help us maintain RVM.
+$ rbenv --version
+rbenv 1.1.2
 
-  Donate: https://opencollective.com/rvm/donate
-
-
-RVM reloaded!
 ```
 
-インストールしたrvmのバージョンを確認しましょう。
-```bash
-$ rvm -v
-rvm 1.29.10 (1.29.10) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
-```
+### rbenvにPATHを通す
 
-次に、以下のコマンドを実行してRubyのバージョンをインストールします。
+rbenvコマンドを利用するために、rbenvにPATHを通します。
 
-`<version>`の部分には、インストールするバージョンを指定してください。
+「PATHを通す」とは、コマンドの実行ファイルの場所を確認するために指定することです。
+
+rbenvコマンドのPATHを通すために、次の3つのコマンドを用意しました。
 
 ```bash
-$ rvm install <version>
+$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+$ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+```
+まずは最初のコマンドです。
+
+スクリプトを`.bash_profile`に追加します。
+
+```console
+$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 ```
 
-以下のように表示されれば正常にインストールされています。
+`>> ~/.bash_profile`でスクリプトを`.bash_profile`に追加しました。
 
-ここでは`2.7.0`を指定しています。
+
+次に、２番めのコマンドを入力して実行します。
+
+```console
+$ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+```
+
+このコマンドを追加することで、ターミナル起動時にrbenvを自動的に起動させます。
+
+最後に、`source`というコマンドを使って追加した内容を反映します。
+
+```console
+$ source ~/.bash_profile
+```
+
+`.bash_profile`に追加した内容を反映できました。
+
+これでrbenvコマンドを利用するのに必要なPATHが通りました。
+
+### Rubyをインストール
+
+Rubyをインストールする前に、インストールできるRubyのバージョンを確認します。
+
+先ほどインストールしたrbenvを使って次のコマンドを入力してください。
 
 ```bash
-$ rvm install 2.7.0
-//===略===
-ruby-2.7.0 - #generating global wrappers.......
-ruby-2.7.0 - #gemset created /home/ec2-user/.rvm/gems/ruby-2.7.0
-ruby-2.7.0 - #importing gemsetfile /home/ec2-user/.rvm/gemsets/default.gems evaluated to empty gem list
-ruby-2.7.0 - #generating default wrappers.......
+$ rbenv install -l
+```
+コマンドを実行すると、最新の安定版のバージョンが一覧で表示されます。
+
+```console
+$ rbenv install -l
+2.5.8
+2.6.6
+2.7.2
+jruby-9.2.13.0
+maglev-1.0.0
+mruby-2.1.2
+rbx-5.0
+truffleruby-20.2.0
+truffleruby+graalvm-20.2.0
+
+Only latest stable releases for each Ruby implementation are shown.
+Use 'rbenv install --list-all' to show all local versions.
 ```
 
-以下のコマンドで使用するバージョンを指定しましょう。
+※ インストール可能なrubyのバージョンを全て表示するには、上記の実行結果にあるように`rbenv install --list-all`というコマンドを実行します。
+
+バージョン番号を見ると、執筆時点（2020年10月）の安定版の最新バージョンは「2.7.2」なので、2.7.2をインストールします。
+
+参考：[Ruby ダウンロード](https://www.ruby-lang.org/ja/downloads/)
+
+もし最新バージョンが表示されない場合は、rbenvとruby​​-buildを最新版にする必要があります。
+
+参考：[rbenv Upgrading with Homebrew](https://github.com/rbenv/rbenv#upgrading-with-homebrew)
+
+それでは、次のコマンドを入力してRuby 2.7.2をインストールします。
 
 ```bash
-$ rvm use <version>
+$ rbenv install 2.7.2
 ```
 
-最後に以下のコマンドで、先ほど指定したバージョンが表示されることを確認してください。
+コマンドを実行するとインストールを開始します。インストール完了まで数分間かかることがあります。
+
+これでRubyがインストールされました。
+
+## Bundlerをインストール
+
+Rubyをインストールしたら、次に**Bundler**をインストールします。
+
+Rubyでは**Gem**というライブラリを使いパッケージを管理しています。
+
+Gemコマンドで簡単にインストールやアンインストールができますが、複数のGemを使うとGem同士で依存関係が生まれ、バージョン違いによる不具合が出てきます。
+
+そこで、BundlerでGemのそれぞれのバージョンを正確に追跡し管理して、Rubyプロジェクトに一貫した環境を提供します。
+
+参考：
+- [Bundler](https://bundler.io/)
+- [RubyGems](https://rubygems.org/)
+
+それではBundlerをインストールしましょう。以下のコマンドをCloud9のTerminalに入力します。
 
 ```bash
-$ ruby -v
-ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux]
+$ gem install bundler
 ```
 
-以上でRubyのバージョン変更は終了です。
 
 ## Ruby on Railsのバージョンを確認する
 
