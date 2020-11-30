@@ -192,6 +192,41 @@ https://us-east-2.console.aws.amazon.com/console/
 
 以上でCloud9の再起動は完了です。
 
+### Cloud9のメモリが足りない場合
+
+コマンド実行時に、`No space left on device`のようなメッセージが表示された場合の対処法です。
+
+Cloud9を停止して、以下のURLにアクセスしてください。
+
+https://us-east-2.console.aws.amazon.com/ec2/v2/home?region=us-east-2#Instances:
+
+表示されているインスタンスのうち、Cloud9が使用しているインスタンスを探しましょう。
+
+どのインスタンスかわからない場合は、一列目の「Name」を参考に該当の環境を探してください。
+
+![image](https://i.gyazo.com/c8d180774891896e02d7c4d47450e66d.png)
+
+画面下側にメニューが表示されているので、ストレージをクリックします。
+
+![image](https://i.gyazo.com/9f02e832bee267e0aaf03264c2cfaebb.png)
+
+下側にスクロールすると、**ブロックデバイス**が表示されるので、クリックします。
+
+![image](https://i.gyazo.com/cee8ddea053e9742d8cdcb2374033a10.png)
+
+対象のボリュームが表示されます。右クリックで、「**ボリュームの変更**」をクリックしてください。
+
+![image](https://i.gyazo.com/81a3b0863bd51329748f3dcc389d5f38.png)
+
+ボリュームを変更できる画面が表示されるので、サイズを変更しましょう。
+
+ここでは、もともと10GiBだったので、20GiBに変更し、「変更」をクリックしてください。
+
+確認画面が表示されたら、「はい」を選択します。
+
+![image](https://i.gyazo.com/82bfdcfae82d038414396f82439126f9.png)
+
+以上で、Cloud9のメモリの変更は終了です。
 
 ### localhost:×××にアクセスしてもアプリケーションが表示されない場合
 
