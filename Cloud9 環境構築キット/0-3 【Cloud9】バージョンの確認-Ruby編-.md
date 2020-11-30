@@ -23,24 +23,17 @@ $ ruby -v
 以下のように数字が表示されます。
 ここではRubyの環境が「**2.6.3**」であることがわかります。
 
-Cloud9のRubyのバージョンが本教材のバージョンと同じであれば、「**Railsのバージョンを確認する**」まで読み飛ばしてください。
-
 ```bash
 $ ruby -v
 ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]
 ```
 
-## Rubyのバージョン確認とインストール
+Cloud9のRubyのバージョンが本教材のバージョンと同じであれば、**Bundlerをインストール**まで読み飛ばしてください。
+
+
+## Rubyのインストール
 
 それではここからRubyのインストールを行っていきます。
-
-Cloud9にはデフォルトでRubyがインストールされていますが、バージョンが古い可能性があるため、併せて確認していきましょう。
-
-以下のコマンドを実行して、表示されるバージョンがこの教材と同じバージョンであればこのステップは不要です。**Bundlerをインストール**まで読み飛ばしてください。
-
-```bash
-ruby -v
-```
 
 ### Homebrewのインストールを確認
 
@@ -109,7 +102,7 @@ $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 
 次に、２番めのコマンドを入力して実行します。
 
-```console
+```bash
 $ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
 ```
 
@@ -117,13 +110,36 @@ $ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_
 
 最後に、`source`というコマンドを使って追加した内容を反映します。
 
-```console
+```bash
 $ source ~/.bash_profile
 ```
 
 `.bash_profile`に追加した内容を反映できました。
 
-これでrbenvコマンドを利用するのに必要なPATHが通りました。
+これでrbenvコマンドを利用するのに必要なPATHが通りました。 
+
+以下のスクリプトを実行して、rbenvが正しく設定されていることを確認します。
+
+```bash
+$ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+```
+
+```bash
+$ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+
+//=====中略=====
+Counting installed Ruby versions: none
+  There aren't any Ruby versions installed under `/home/ec2-user/.rbenv/versions'.
+  You can install Ruby versions like so: rbenv install 2.2.4
+Checking RubyGems settings: OK
+Auditing installed plugins: OK
+```
+
+以下のコマンドを実行して、最新バージョンのrbenvを使用するように設定します。
+
+```bash
+
+```
 
 ### Rubyをインストール
 
