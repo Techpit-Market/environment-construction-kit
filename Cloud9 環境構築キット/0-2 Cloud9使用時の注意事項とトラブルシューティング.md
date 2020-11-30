@@ -228,6 +228,7 @@ https://us-east-2.console.aws.amazon.com/ec2/v2/home?region=us-east-2#Instances:
 
 以上で、Cloud9のメモリの変更は終了です。
 
+
 ### localhost:×××にアクセスしてもアプリケーションが表示されない場合
 
 Cloud9はAWS上で動いているため、localhostからアクセスすることはできません。
@@ -239,5 +240,40 @@ Cloud9はAWS上で動いているため、localhostからアクセスするこ�
 すると以下のように起動中のアプリケーションが表示されます。
 
 ![preview3](asset/preview3.png)
+
+### Rails6でアプリケーションを起動する際の注意点
+
+Rails6でアプリケーションを起動すると以下のような画面が表示されることがあります。
+
+```bash
+$ rails server
+```
+
+![image](https://i.gyazo.com/b9c2436ef6730636293e098ffb852e1a.png)
+
+`config/environments/development.rb`を以下のように修正してください。
+
+```ruby:config/environments/development.rb
+Rails.application.configure do
+  config.hosts << "<許可したいホスト名>"
+  
+  #=====中略=====
+  
+end
+```
+`<許可したい表示名>`には、「Blocked host:」のあとに表示されている「～.vfs.cloud9.us-east-2.amazonaws.com」で終わる文字列を入力してください。
+
+再度アプリケーションを起動します。
+
+```bash
+$ rails server
+```
+![image](https://i.gyazo.com/9dc28f9247f4c5944c451bf1079f0d84.png)
+
+上記のような画面が表示されたら、右上の「Pop Out New Windows」をクリックして下さい。
+
+以下のようにただしくアプリケーションが表示されます。
+
+![image](https://i.gyazo.com/3fe94b844867fd126607f7513ec6648a.png)
 
 
