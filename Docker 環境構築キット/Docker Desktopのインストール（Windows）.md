@@ -171,22 +171,36 @@ WSL 2のインストールは以上になります。「Docker Desktop for Windo
 
 ![image](https://i.gyazo.com/ffd4008f74ec58cacded3faa1f911b7f.png)
 
-画面右側にコマンドを入力して、バージョンの確認を行います。
+PowerShellにコマンドを入力して、バージョンの確認を行います。
 
 ![image](https://i.gyazo.com/b57ddde79bb32c6fe5d1208d7c065ad5.png)
 
 ```shell
-$ docker -v
-$ docker-compose -v 
+$ docker version
+$ docker-compose version
 ```
 
 それぞれ以下のように表示されればDockerは正常に起動されています。
 
 ```shell
-$ docker -v
-Docker version 19.03.13, build 4484c46d9d
-$ docker-compose -v 
+$ docker version
+docker version
+Client: Docker Engine - Community
+ Cloud integration: 1.0.2
+ Version:           19.03.13
+ API version:       1.40
+ Go version:        go1.13.15
+ Git commit:        4484c46d9d
+ Built:             Wed Sep 16 17:00:27 2020
+ OS/Arch:           windows/amd64
+ Experimental:      false
+Error response from daemon: open \\.\pipe\docker_engine_linux: The system cannot find the file specified.
+
+$ docker-compose version
 docker-compose version 1.27.4, build 40524192
+docker-py version: 4.3.1
+CPython version: 3.7.4
+OpenSSL version: OpenSSL 1.1.1c  28 May 2019
 ```
 
 以上でDocker Desktop for Windowsの環境構築は終了です。
