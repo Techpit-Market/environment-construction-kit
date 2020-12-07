@@ -10,8 +10,7 @@ type: "template"
 
 もし既にお手元のPCにDocker Desktopがインストール済みであれば、このパートは読み飛ばしても大丈夫です。
 
-また、お使いのWindowsの種類によって操作が異なります。該当の見出しまで進んでください、
-
+また、お使いのWindowsの種類によって操作が異なります。該当の見出しまで進んでください。
 | 種類 | 環境構築手順 |
 |:---|:---|
 |Windows 10 Pro|Docker Desktop for Windowsをダウンロード|
@@ -139,6 +138,11 @@ $ wsl --list --verbose
 WSL 2のインストールは以上になります。「Docker Desktop for Windowsのダウンロード」に進みましょう。
 
 ## Docker Desktop for Windowsのダウンロード
+
+**過去にDocker Toolboxのインストールをしたことがある方は必ずアンインストールしてからDocker Desktop for Windowsのインストールを始めてください**
+
+(参考) [Docker Toolboxのアンインストール](https://docs.docker.com/docker-for-windows/docker-toolbox/#uninstall-docker-toolbox)
+
 [Docker公式サイト](https://www.docker.com/products/docker-desktop)にアクセスしてください。
 
 「Download for Windows(stable)」を選択します。
