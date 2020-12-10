@@ -272,8 +272,6 @@ $ rails server
 
 上記のような画面が表示されたら、右上の「Pop Out New Windows」をクリックして下さい。
 
-以下のようにただしくアプリケーションが表示されます。
+以下のようにRailsのデフォルトページが表示されます。
 
 ![image](https://i.gyazo.com/3fe94b844867fd126607f7513ec6648a.png)
-
-
