@@ -1,11 +1,10 @@
 # 【Cloud9】バージョンの確認
 
-この章では、RubyおよびRuby on Railsのバージョンを確認していきます。
+このパートでは、RubyおよびRuby on Railsのバージョンを確認していきます。
 
 なお、この教材ではRubyのバージョンは○○、Ruby on Railsのバージョンは○○を推奨しています。
 
->↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
->○○に教材のバージョンを入れる
+> ○○に教材のバージョンを入れてください
 
 
 ## Rubyのバージョンを確認する
@@ -17,18 +16,20 @@ https://us-east-2.console.aws.amazon.com/console/
 Cloud9上のTerminalを立ち上げて、以下のコマンドを実行してRubyのバージョンを確認しましょう。
 
 ```bash
-$ ruby -v
+ruby -v
 ```
 
 以下のように数字が表示されます。
+
+```bash
+ruby -v
+ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]
+```
+
 ここではRubyの環境が「**2.6.3**」であることがわかります。
 
 Cloud9のRubyのバージョンが本教材のバージョンと同じであれば、「**Bundlerをインストール**」まで読み飛ばしてください。
 
-```bash
-$ ruby -v
-ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]
-```
 
 ## Rubyのバージョンを変更する
 
@@ -39,19 +40,30 @@ Rubyのバージョン管理ツールであるrvmを使います。
 以下のコマンドでインストール済みのRubyのバージョンを確認します。
 
 ```bash
-$ rvm list
+rvm list
 ```
 
-以下のコマンドでインストール可能なRubyのバージョンを一覧表示します。
+実行結果は以下になります。
 
 ```bash
-$ rvm list known
+rvm list
+=* ruby-2.6.3 [ x86_64 ]
+
+# => - current
+# =* - current && default
+#  * - default
+```
+
+また、以下のコマンドでインストール可能なRubyのバージョンを一覧表示します。
+
+```bash
+rvm list known
 ```
 
 実行結果で、自分のインストールしたいバージョンがあることを確認してください。
 
 ```bash
-$ rvm list known
+rvm list known
 
 //====略====
 
@@ -74,18 +86,19 @@ ruby-head
 
 ```
 
-ここでインストールしたいバージョンがない場合は、rvmのアップグレードを行う必要があります。
+ここでインストールしたいバージョンがない場合は、rvmのアップデートをおこなう必要があります。
 
-※教材執筆時点では、Ruby2.7がデフォルトのバージョンではインストールできなかったため、`rvm 1.29.10`をインストールします。
+アップデートをするには、以下のように`get`コマンドを実行します。
 
-以下のコマンドを実行して下さい。
 ```bash
-$ rvm get 1.29.10
+rvm get latest
 ```
 
 ```bash
-$ rvm get 1.29.10
+rvm get latest
+
 //====略====
+
 Thanks for installing RVM 
 Please consider donating to our open collective to help us maintain RVM.
 
@@ -96,8 +109,9 @@ RVM reloaded!
 ```
 
 インストールしたrvmのバージョンを確認しましょう。
+
 ```bash
-$ rvm -v
+rvm -v
 rvm 1.29.10 (1.29.10) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
 ```
 
@@ -106,20 +120,22 @@ rvm 1.29.10 (1.29.10) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https:/
 `<version>`の部分には、インストールするバージョンを指定してください。
 
 ```bash
-$ rvm install <version>
+rvm install <version>
 ```
 
 以下のように表示されれば正常にインストールされています。
 
-ここでは`2.7.0`を指定しています。
+ここでは`2.7.2`を指定しています。
 
 ```bash
-$ rvm install 2.7.0
+$ rvm install 2.7.2
+
 //===略===
-ruby-2.7.0 - #generating global wrappers.......
-ruby-2.7.0 - #gemset created /home/ec2-user/.rvm/gems/ruby-2.7.0
-ruby-2.7.0 - #importing gemsetfile /home/ec2-user/.rvm/gemsets/default.gems evaluated to empty gem list
-ruby-2.7.0 - #generating default wrappers.......
+
+ruby-2.7.2 - #generating global wrappers.......
+ruby-2.7.2 - #gemset created /home/ec2-user/.rvm/gems/ruby-2.7.0
+ruby-2.7.2 - #importing gemsetfile /home/ec2-user/.rvm/gemsets/default.gems evaluated to empty gem list
+ruby-2.7.2 - #generating default wrappers.......
 ```
 
 以下のコマンドで使用するバージョンを指定しましょう。
@@ -132,10 +148,11 @@ $ rvm use <version>
 
 ```bash
 $ ruby -v
-ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux]
+ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-linux]
 ```
 
 以上でRubyのバージョン変更は終了です。
+
 
 ## Bundlerをインストール
 Rubyをインストールしたら、次に**Bundler**をインストールします。
