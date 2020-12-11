@@ -207,15 +207,8 @@ yarnと互換性のあるnpmというパッケージマネージャもありま�
 次のコマンドを入力します。
 
 ```bash
-brew install yarn
+npm i -g yarn
 ```
-
-Homebrewのコマンドを実行すると、yarnがインストールされます。
-
-::: warn
-yarnインストール時に、`No space left on device`と表示される場合があります。
-トラブルシューティングの「Cloud9のメモリが足りない場合」を参照し、再度上記のコマンドを実行して下さい。
-:::
 
 yarnが実際にインストールされたかを確認するために、次のコマンドを入力します。
 
@@ -227,7 +220,7 @@ yarn -v
 
 ```bash
 yarn -v
-1.16.0
+1.22.10
 ```
 
 ここでは「`1.16.0`」と表示されました。バージョン情報が表示されていれば、yarnがインストールされたことが確認できます。
@@ -281,53 +274,41 @@ sprockets-rails (3.2.2)
 
 ## Ruby on Railsのバージョンをインストールする
 
-それではここからRailsのバージョンをインストールする方法を説明していきます。
+いよいよ、Railsをインストールします。
 
-以下のコマンドでRailsのバージョンをインストールすることができます。
+Railsのインストール時に「`-v バージョン番号`」とバージョンを指定してインストールできます。
 
-`<version>`の部分には、インストールするバージョンを指定してください。
+今回はバージョン「`6.0.3.4`」をインストールします。
 
-```bash
-gem install rails -v <version>
-```
+参考：[railsの全バージョン履歴](https://rubygems.org/gems/rails/versions)
 
-次のように表示されていれば正常にインストールが完了しています。
-以下の例では`6.0.0`を指定しています。
+次のコマンドを入力します。
 
 ```bash
-gem install rails -v <version>
-
-//===略===
-
-Installing ri documentation for actionmailbox-6.0.0
-Parsing documentation for actiontext-6.0.0
-Installing ri documentation for actiontext-6.0.0
-Parsing documentation for railties-6.0.0
-Installing ri documentation for railties-6.0.0
-Parsing documentation for rails-6.0.0
-Installing ri documentation for rails-6.0.0
-Done installing documentation for zeitwerk, activesupport, erubi, actionview, actionpack, activemodel, activerecord, activejob, actionmailer, actioncable, mimemagic, marcel, activestorage, actionmailbox, actiontext, railties, rails after 13 seconds
-17 gems installed
+gem install rails -v 6.0.3.4
 ```
 
-最後に以下のコマンドで先ほどインストールしたRailsのバージョンが追加されていることを確認しましょう。
+コマンドを実行すると、インストールを開始します。インストールの完了までに数分かかることがあります。
 
-```bash
-gem list rails
+Railsをインストールしたら、Railsのバージョンを確認するために次のコマンドを入力します。
 
-*** LOCAL GEMS ***
-
-coffee-rails (4.2.2)
-jquery-rails (4.4.0)
-rails (6.0.0, 5.0.7.2, 5.0.0)
-rails-dom-testing (2.0.3)
-rails-html-sanitizer (1.3.0)
-sass-rails (5.0.7)
-sprockets-rails (3.2.2)
+```console
+rails -v
 ```
 
-以上でRuby、Ruby on Railsのバージョンに関する説明は終わりです。
+コマンドを実行すると、次の画面が表示されます。
 
-教材とバージョンが異なると、思わぬエラーが発生する場合があります。教材と同じバージョンで進めることを推奨しています。
+```console
+rails -v
+Rails 6.0.3.4
+```
+
+「`Rails 6.0.3.4`」と表示されました。
+
+これで無事にRuby on Railsのインストールが完了しました。
+
+以上でRuby on Railsをインストールできました。
+
+お疲れ様でした。
 
 
