@@ -26,5 +26,6 @@ Ruby(Ruby on Rails)、PHP(Laravel)のバージョンの確認手順について�
 - Python: 3.6.12
 
 ## DBについて
-SQLiteがAmazon Linuxだと使えない場合があります。
+SQLite3がAmazon Linuxだと使えない場合があります。
 インストールするかCloud9を立ち上げる際に、`Ubuntu`を選択するようにしてください。
+※Rails6はUbuntuを選択するように0-2の記載を変更してください。
