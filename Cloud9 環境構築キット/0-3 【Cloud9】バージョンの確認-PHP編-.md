@@ -81,10 +81,10 @@ Complete!
 
 次にインストールしたいPHPのバージョンをインストールしていきます。
 
-ここでは、「PHP7.1」をインストールしているので、`php73`としています。各自必要なバージョンを指定するようにしてください。
+ここでは、「PHP7.3」をインストールしているので、`php73`としています。各自必要なバージョンを指定するようにしてください。
 
 ```bash
-sudo yum install php71*
+sudo yum install php73*
 ```
 
 途中、`Is this ok Is this ok [y/d/N]`と表示されるので、「y」を入力して「Enter」をクリックします。
@@ -92,7 +92,7 @@ sudo yum install php71*
 以下のように表示されていれば正常にインストールが完了しています。
 
 ```bash
-sudo yum install php71*
+sudo yum install php73*
 
 //====略====
   pixman.x86_64 0:0.32.4-4.11.amzn1                                                                
@@ -115,12 +115,10 @@ sudo ln -s /etc/alternatives/php7 /usr/bin/php
 最後に以下のコマンドで、先ほど指定したバージョンが表示されることを確認してください。
 
 ```bash
-php -v
-PHP 7.1.33 (cli) (built: Oct 31 2019 17:36:04) ( NTS )
+PHP 7.3.23 (cli) (built: Oct 21 2020 20:24:49) ( NTS )
 Copyright (c) 1997-2018 The PHP Group
-Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies
-    with Zend OPcache v7.1.33, Copyright (c) 1999-2018, by Zend Technologies
-    with Xdebug v2.5.5, Copyright (c) 2002-2017, by Derick Rethans
+Zend Engine v3.3.23, Copyright (c) 1998-2018 Zend Technologies
+    with Zend OPcache v7.3.23, Copyright (c) 1999-2018, by Zend Technologies
 ```
 
 以上でPHPのバージョン変更は終了です。
@@ -170,10 +168,10 @@ Composer version 2.0.7 2020-11-13 17:31:06
 
 それでは試しにLaravelのプロジェクトを作成してみましょう。
 
-今回はLaravel 5.2で「Techpit」というサンプルプロジェクトを作成してみます。以下のコマンドを実行して下さい。
+今回はLaravel 6.0で「Techpit」というサンプルプロジェクトを作成してみます。以下のコマンドを実行して下さい。
 
 ```bash
-composer create-project "laravel/laravel=5.2.*" Techpit
+composer create-project "laravel/laravel=6.0.*" Techpit
 ```
 
 最後に以下のコマンドを実行してサーバーを立ち上げてみましょう。
@@ -185,11 +183,11 @@ php artisan serve --port=8080
 
 プレビューを見るには、画面上部にある「**Preview**」ボタンをクリックし、「**Preview Running Application**」を選択します。
 
-![preview](asset/preview.png)
+![preview](https://i.gyazo.com/c383d80b6f31b28eaff09f17d6cdaa74.png)
 
 画面右下にスタート画面が表示されれば、Laravelプロジェクトは正しく作成されています。
 
-![laravel5](asset/laravel5.png)
+![laravel](https://i.gyazo.com/873e1ae2673a5460bf44e303380b38c1.png)
 
 以上でLaravelのインストールは終了です。
 
