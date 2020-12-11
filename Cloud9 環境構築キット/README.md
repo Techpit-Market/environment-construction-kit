@@ -26,7 +26,7 @@ Ruby(Ruby on Rails)、PHP(Laravel)のバージョンの確認手順について�
 - Python: 3.6.12
 
 ## OSについて
-PHPはAmazon Linux(sudoがデフォルトでインストールされている)
+PHPはAmazon Linux(Ubuntuだとyumがデフォルトでインストールされていないため、バージョンの変更パートを書き換える必要があります)
 RubyはUbuntu(SQLite3Amazon Linuxだと使えない)
 を使用することを推奨しています。
 
