@@ -32,11 +32,11 @@ Cloud9は完全従量課金での利用になりますが、1年間は無料で�
 
 するとコンソールが開きます。
 
-![image8](https://i.gyazo.com/d7069b2e2955ce905fa52471bba2294b.png)
+<img width="555" alt="" src="https://i.gyazo.com/d7069b2e2955ce905fa52471bba2294b.png">
 
 「**サービスを検索する**」の欄に「**Cloud9**」と入力して、クリックしてください。
 
-![image9](https://i.gyazo.com/a2b4d888aff89fd57e73222e2b0c9733.png)
+<img width="555" alt="" src="https://i.gyazo.com/a2b4d888aff89fd57e73222e2b0c9733.png">
 
 以下のような画面が表示されます。
 
@@ -48,17 +48,17 @@ Cloud9は完全従量課金での利用になりますが、1年間は無料で�
 
 ここでは`sample`としています。
 
-![image10](https://i.gyazo.com/7768910013f2bdb2ecbc71d4a68d89a9.png)
+<img width="555" alt="" src="https://i.gyazo.com/7768910013f2bdb2ecbc71d4a68d89a9.png">
 
 名前の入力が終わったら、「**Next step**」をクリックします。
 
 すると、以下のような画面が表示されます。
 
-![image11](https://i.gyazo.com/90dbf75d7039cad2561ac766356a0eab.png)
+<img width="555" alt="" src="https://i.gyazo.com/90dbf75d7039cad2561ac766356a0eab.png">
 
 「**Network settings (advanced)**」の部分をクリックしてください。
 
-![Cloud9_VPC](https://i.gyazo.com/6a9c46b6124e929c945b6a8c09912fc3.png)
+<img width="555" alt="" src="https://i.gyazo.com/6a9c46b6124e929c945b6a8c09912fc3.png">
 
 上記の画像のように、「**Network (VPC)** 」にデフォルトの値が設定されていることを確認してください。
 
@@ -77,10 +77,10 @@ Cloud9は完全従量課金での利用になりますが、1年間は無料で�
 
 以下のような画面が表示されるので、内容を確認の上、「**Create enviroment**」をクリックします。
 
-![image12](https://i.gyazo.com/90c3fcf2f486c07636190dc2b2d0328b.png)
+<img width="555" alt="" src="https://i.gyazo.com/90c3fcf2f486c07636190dc2b2d0328b.png">
 
 以下のように表示されれば、Cloud9のセットアップは完了です！
 
-![image13](https://i.gyazo.com/111a4e03ce2bbf1584fb53fd8add75b8.png)
+<img width="555" alt="" src="https://i.gyazo.com/111a4e03ce2bbf1584fb53fd8add75b8.png">
 
 Cloud9の環境構築は以上になります。

@@ -27,7 +27,7 @@
 
 ※英語での入力になります。
 
-<img src="https://i.gyazo.com/30039b20b52dde86b4ea3632f540fa6f.png" width="">
+<img width="555" alt="" src="https://i.gyazo.com/30039b20b52dde86b4ea3632f540fa6f.png">
 
 入力が完了したら、
 
@@ -41,7 +41,7 @@ AWSのサービスは利用したサービス料に応じて課金されてい�
 
 利用料金等の確認方法は「**AWSの料金について**」に記載されていますので、そちらを参照してください。
 
-<img src="https://i.gyazo.com/c19d1ccd7890c4160246ab8b2da20219.png" width="">
+<img width="555" alt="" src="https://i.gyazo.com/c19d1ccd7890c4160246ab8b2da20219.png">
 
 
 - カード番号
@@ -53,7 +53,7 @@ AWSのサービスは利用したサービス料に応じて課金されてい�
 
 すると以下のような本人確認画面が表示されます。
 
-![image4](https://i.gyazo.com/1e0593d0b4dacd9808e16c8bb4341ade.png)
+<img width="555" alt="" src="https://i.gyazo.com/1e0593d0b4dacd9808e16c8bb4341ade.png">
 
 「**検証コードをどのように受け取りますか?**」
 の部分は、「テキストメッセージ(SMS)」と「音声通話」のどちらを選択しても構いませんが、特に事情がない場合は「テキストメッセージ(SMS)」で問題ないです。
@@ -72,10 +72,10 @@ AWSのサービスは利用したサービス料に応じて課金されてい�
 
 この教材では最低限の機能しか使わないため、「**ベーシックプラン**」を選択して次に進みます。
 
-![image4](https://gyazo.com/c5a0b64f6c120220a819a512cb976a5b)
+<img height="555" alt="" src="https://gyazo.com/c5a0b64f6c120220a819a512cb976a5b.png">
 
 以下のような画面が表示されれば、正常にAWSアカウントが作成されています。
 
 数分以内にAWSからメールが届くので、届き次第「**AWS マネジメントコンソールにお進みください**」をクリックして**Cloud9のセットアップ**に進みましょう。
 
-![image4](https://i.gyazo.com/cdc6025ca864891f8c6297cc3f7fc1ce.png)
+<img width="555" alt="" src="https://i.gyazo.com/cdc6025ca864891f8c6297cc3f7fc1ce.png">
