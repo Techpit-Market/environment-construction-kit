@@ -25,6 +25,11 @@ Ruby(Ruby on Rails)、PHP(Laravel)のバージョンの確認手順について�
 - Node.js: 10.23.0
 - Python: 3.6.12
 
+## OSについて
+PHPはAmazon Linux(sudoがデフォルトでインストールされている)
+RubyはUbuntu(SQLite3Amazon Linuxだと使えない)
+を使用することを推奨しています。
+
 ## DBについて
 SQLite3がAmazon Linuxだと使えない場合があります。
 インストールするかCloud9を立ち上げる際に、`Ubuntu`を選択するようにしてください。
