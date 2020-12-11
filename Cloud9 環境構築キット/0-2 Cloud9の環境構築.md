@@ -28,43 +28,45 @@ Cloud9は完全従量課金での利用になりますが、1年間は無料で�
 
 パスワードには先ほど登録したパスワードを入力しましょう。
 
-![image7](asset/sign_in.png)
+![image7](https://i.gyazo.com/4fe65dcf74dce6edf0e72f97a6fbc6ea.png)
 
 するとコンソールが開きます。
 
-![image8](asset/console.png)
+![image8](https://i.gyazo.com/d7069b2e2955ce905fa52471bba2294b.png)
 
 「**サービスを検索する**」の欄に「**Cloud9**」と入力して、クリックしてください。
 
-![image9](asset/console_cloud9.png)
+![image9](https://i.gyazo.com/a2b4d888aff89fd57e73222e2b0c9733.png)
 
 以下のような画面が表示されます。
 
 「**Create enviroment**」をクリックしましょう。
 
-![image9](asset/create_env.png)
+![image9](https://i.gyazo.com/f65985d901e747ae74fe8a590a6dd9a6.png)
 
 以下のような画面が表示されるので、「**Name**」の部分に任意の名前を入力しましょう。ここでつけた名前が環境の名前になります。
 
 ここでは`sample`としています。
 
-![image10](asset/step1.png)
+![image10](https://i.gyazo.com/7768910013f2bdb2ecbc71d4a68d89a9.png)
 
 名前の入力が終わったら、「**Next step**」をクリックします。
 
 すると、以下のような画面が表示されます。
 
-![image11](asset/step2.png)
+![image11](https://i.gyazo.com/90dbf75d7039cad2561ac766356a0eab.png)
 
 「**Network settings (advanced)**」の部分をクリックしてください。
 
-![Cloud9_VPC](asset/Cloud9_VPC.png)
+![Cloud9_VPC](https://i.gyazo.com/6a9c46b6124e929c945b6a8c09912fc3.png)
 
 上記の画像のように、「**Network (VPC)** 」にデフォルトの値が設定されていることを確認してください。
 
 ※Network (VPC)に値が表示されない場合は別途VPCの設定を行う必要があります。この先のパートの「注意事項」の「VPCの設定」を参考にして設定を行ってください。
 
 今回は特に設定は変更せずデフォルトの設定のまま進めましょう。
+
+※SQLite 3.0以上を使用する場合はAmazon LinuxではなくUbuntuを選択してください。
 
 設定の詳細は公式サイトを参考にしてください。
 
@@ -75,10 +77,10 @@ Cloud9は完全従量課金での利用になりますが、1年間は無料で�
 
 以下のような画面が表示されるので、内容を確認の上、「**Create enviroment**」をクリックします。
 
-![image12](asset/step3.png)
+![image12](https://i.gyazo.com/90c3fcf2f486c07636190dc2b2d0328b.png)
 
 以下のように表示されれば、Cloud9のセットアップは完了です！
 
-![image13](asset/cloud9.png)
+![image13](https://i.gyazo.com/111a4e03ce2bbf1584fb53fd8add75b8.png)
 
 Cloud9の環境構築は以上になります。

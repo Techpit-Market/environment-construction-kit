@@ -17,7 +17,7 @@ https://us-east-2.console.aws.amazon.com/console/
 Cloud9上のTerminalを立ち上げて、以下のコマンドを実行してPHPのバージョンを確認しましょう。
 
 ```bash
-$ php -v
+php -v
 ```
 
 以下のように数字が表示されます。
@@ -26,7 +26,7 @@ $ php -v
 Cloud9のPHPのバージョンが本教材のバージョンと同じであれば、「**Laravelのバージョンを確認する**」まで読み飛ばしてください。
 
 ```bash
-$ php -v
+php -v
 PHP 5.6.40 (cli) (built: Oct 31 2019 20:35:16) 
 Copyright (c) 1997-2016 The PHP Group
 Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
@@ -42,11 +42,11 @@ Linuxのパッケージ管理ツールである`yum`を使います。
 以下のコマンドでパッケージをアップデートします。
 
 ```bash
-$ sudo yum -y update
+sudo yum -y update
 ```
 
 ```bash
-$ sudo yum -y update
+sudo yum -y update
 
 //====略====
 Updated:
@@ -61,7 +61,7 @@ Complete!
 バージョン5.6が入っていたので、`php56`としていますが、「**PHPのバージョンを確認する**」で表示されたバージョンを指定しましょう。
 
 ```bash
-$ sudo yum remove php56*
+sudo yum remove php56*
 ```
 
 途中、`Is this ok [y/N]`と表示されるので、「y」を入力して「Enter」をクリックします。
@@ -70,7 +70,7 @@ $ sudo yum remove php56*
 以下のように表示されていれば正常にアンインストールされています。
 
 ```bash
-$ sudo yum remove php56*
+sudo yum remove php56*
 
 //====略====
 Dependency Removed:
@@ -84,7 +84,7 @@ Complete!
 ここでは、「PHP7.1」をインストールしているので、`php73`としています。各自必要なバージョンを指定するようにしてください。
 
 ```bash
-$ sudo yum install php71*
+sudo yum install php71*
 ```
 
 途中、`Is this ok Is this ok [y/d/N]`と表示されるので、「y」を入力して「Enter」をクリックします。
@@ -92,7 +92,7 @@ $ sudo yum install php71*
 以下のように表示されていれば正常にインストールが完了しています。
 
 ```bash
-$ ysudo yum install php71*
+sudo yum install php71*
 
 //====略====
   pixman.x86_64 0:0.32.4-4.11.amzn1                                                                
@@ -108,14 +108,14 @@ Complete!
 最後に、`/usr/bin/php`から元のバージョンへのリンクが張られているため、インストールしたバージョンにリンクを張り替えます。
 
 ```bash
-$ sudo unlink /usr/bin/php
-$ sudo ln -s /etc/alternatives/php7 /usr/bin/php
+sudo unlink /usr/bin/php
+sudo ln -s /etc/alternatives/php7 /usr/bin/php
 ```
 
 最後に以下のコマンドで、先ほど指定したバージョンが表示されることを確認してください。
 
 ```bash
-$ php -v
+php -v
 PHP 7.1.33 (cli) (built: Oct 31 2019 17:36:04) ( NTS )
 Copyright (c) 1997-2018 The PHP Group
 Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies
@@ -134,25 +134,25 @@ Laravelのインストールには**composer**というPHPのパッケージ管�
 まずは以下のコマンドでcomporserをインストールしましょう。
 
 ```bash
-$ curl -sS https://getcomposer.org/installer | php
+curl -sS https://getcomposer.org/installer | php
 ```
 
 次にインストールしたcomporserを移動します。
 
 ```bash
-$ sudo mv composer.phar /usr/local/bin/composer
+sudo mv composer.phar /usr/local/bin/composer
 ```
 
 composerがインストールされているか確認しましょう。以下のコマンドを実行して下さい。
 
 ```bash
-$ composer
+composer
 ```
 
 以下のように表示されていれば正常にインストールされています。
 
 ```bash
-$ composer
+composer
    ______
   / ____/___  ____ ___  ____  ____  ________  _____
  / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
@@ -173,14 +173,14 @@ Composer version 2.0.7 2020-11-13 17:31:06
 今回はLaravel 5.2で「Techpit」というサンプルプロジェクトを作成してみます。以下のコマンドを実行して下さい。
 
 ```bash
-$ composer create-project "laravel/laravel=5.2.*" Techpit
+composer create-project "laravel/laravel=5.2.*" Techpit
 ```
 
 最後に以下のコマンドを実行してサーバーを立ち上げてみましょう。
 
 ```bash
-$ cd Techpit
-$ php artisan serve --port=8080
+cd Techpit
+php artisan serve --port=8080
 ```
 
 プレビューを見るには、画面上部にある「**Preview**」ボタンをクリックし、「**Preview Running Application**」を選択します。

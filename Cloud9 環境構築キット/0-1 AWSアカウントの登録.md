@@ -10,7 +10,7 @@
 
 以下のような画面が表示されるので、「**今すぐ無料サインアップ**」をクリックしてください。
 
-![image1](asset/create_account_page.png)
+![image1](https://i.gyazo.com/73cd7d34724aa4b8b91d26a9ee7f4f39.png)
 
 以下の画面で、下記の情報を入力しましょう。
 - Eメールアドレス
@@ -19,7 +19,7 @@
 - AWS アカウント名
 ※アカウント名は後で変更可能です。
 
-![image5](asset/info_page.png)
+![image5](https://i.gyazo.com/660b541d80d61a03470fd843d8ac58f2.png)
 
 続いて、連絡先情報を入力する画面が表示されるので、必要な情報を全て入力しましょう。
 
@@ -27,7 +27,7 @@
 
 ※英語での入力になります。
 
-![image2](asset/account.info.png)
+<img src="https://i.gyazo.com/30039b20b52dde86b4ea3632f540fa6f.png" width="">
 
 入力が完了したら、
 
@@ -39,9 +39,9 @@
 
 AWSのサービスは利用したサービス料に応じて課金されていく重課金性になります。画面上にも表示されていますが、`登録後1年間は無料`で使うことができます。無料期間が終わると課金されていく仕組みです。
 
-利用料金等の確認方法は「**注意事項**」のパートに記載されていますので、そちらを参照してください。
+利用料金等の確認方法は「**AWSの料金について**」に記載されていますので、そちらを参照してください。
 
-![image3](asset/card.info.png)
+<img src="https://i.gyazo.com/c19d1ccd7890c4160246ab8b2da20219.png" width="">
 
 
 - カード番号
@@ -53,7 +53,7 @@ AWSのサービスは利用したサービス料に応じて課金されてい�
 
 すると以下のような本人確認画面が表示されます。
 
-![image4](asset/veryfy.phone.png)
+![image4](https://i.gyazo.com/1e0593d0b4dacd9808e16c8bb4341ade.png)
 
 「**検証コードをどのように受け取りますか?**」
 の部分は、「テキストメッセージ(SMS)」と「音声通話」のどちらを選択しても構いませんが、特に事情がない場合は「テキストメッセージ(SMS)」で問題ないです。
@@ -62,20 +62,20 @@ AWSのサービスは利用したサービス料に応じて課金されてい�
 
 すると、4桁の認証コードが届くかと思いますので、認証コードを入力して「**コードの検証**」をクリックましょう。
 
-![image4](asset/verify.number.png)
+![image4](https://i.gyazo.com/da585952c44cd09665d59af8a32902ae.png)
 
 以下のような画面が表示されれば、本人確認は完了です。「**続行**」をクリックして次に進みます。
 
-![image4](asset/verify.ok.png)
+![image4](https://i.gyazo.com/28620f56081356ced594d04db97a3fc8.png)
 
 以下のような画面が表示されます。
 
 この教材では最低限の機能しか使わないため、「**ベーシックプラン**」を選択して次に進みます。
 
-![image4](asset/supprot.png)
+![image4](https://gyazo.com/c5a0b64f6c120220a819a512cb976a5b)
 
 以下のような画面が表示されれば、正常にAWSアカウントが作成されています。
 
 数分以内にAWSからメールが届くので、届き次第「**AWS マネジメントコンソールにお進みください**」をクリックして**Cloud9のセットアップ**に進みましょう。
 
-![image4](asset/complete.accout.png)
+![image4](https://i.gyazo.com/cdc6025ca864891f8c6297cc3f7fc1ce.png)
