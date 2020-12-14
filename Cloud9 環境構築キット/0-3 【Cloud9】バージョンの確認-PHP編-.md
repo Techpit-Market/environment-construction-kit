@@ -55,6 +55,15 @@ Updated:
 Complete!
 ```
 
+アップデートできるパッケージがなかった場合は以下のように表示されます。
+
+```bash
+sudo yum -y update
+Loaded plugins: priorities, update-motd, upgrade-helper
+1067 packages excluded due to repository priority protections
+No packages marked for update
+```
+
 以下のコマンドでデフォルトでインストールされていたバージョンをアンインストールします。
 
 バージョン5.6が入っていたので、`php56`としていますが、「**PHPのバージョンを確認する**」で表示されたバージョンを指定しましょう。
@@ -103,6 +112,7 @@ sudo yum install php73*
 
 Complete!
 ```
+
 
 最後に、`/usr/bin/php`から元のバージョンへのリンクが張られているため、インストールしたバージョンにリンクを張り替えます。
 
