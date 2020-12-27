@@ -5,8 +5,7 @@
 > ここから教材
 
 
-# 開発に必要なツール
-
+# 開発に必要なツール (macOS)
 ここでは開発を進めるために必要なツールを紹介します。
 
 はじめてテキストエディタやターミナルを使う人はぜひ参考にしてください。
@@ -28,7 +27,7 @@
 （Visual Studio Codeは「VSCode」と通称され、本教材中でも「VSCode」と表記する場合があります）
 
 
-## Visual Studio Codeのインストール
+## Visual Studio Code のインストール
 Visual Studio Codeのインストール方法を説明します。
 
 最初に、次のリンク先のページから「Visual Studio Code」をダウンロードしてください。
@@ -51,7 +50,7 @@ Visual Studio Codeが起動して、次の画面が表示されたらインス�
 ![image](https://i.gyazo.com/3a9c885cbe0dbf2758f7162c859f569d.png)
 
 
-## Visual Studio Codeの設定をカスタマイズする
+## Visual Studio Code の設定をカスタマイズ
 Visual Studio Codeはデフォルト設定でも利用できますが、ここでは扱いやすいように次のカスタマイズを行います（各自の好みで設定しても問題はありません）。
 
 設定をはじめるには、`Command` + `,`キーを押すか、画面左下の歯車アイコンをクリックして設定画面を開きます。
@@ -100,19 +99,16 @@ Visual Studio Codeはデフォルト設定でも利用できますが、ここ�
 ![image](https://i.gyazo.com/02b74ac567ed7249b426a9d8e92bf685.png)
 
 
-## Visual Studio Codeの拡張機能をインストールする
-Visual Studio Codeで開発しやすくするため、さらに**拡張機能**を追加します。
-追加する拡張機能は次の3つです。
+## Visual Studio Codeの拡張機能をインストール
+Visual Studio Codeで開発しやすくするため、さらに**拡張機能**を追加します。追加する拡張機能は次の3つです。
 
 ```
-● Ruby
-  → VSCodeに対するRuby言語とデバッグサポートを提供する。
-
+● PHP Intelephense
+  → PHPのコード補完や定義への移動など様々な機能を提供。
 ● Japanese Language Pack for Visual Studio Code
-  → 日本語対応のVSCodeのUIを提供する。
-
+  → VSCodeを日本語に対応したUIを提供。
 ● vscode-icons
-  → ファイルやフォルダにアイコンを追加する。
+  → ファイルやフォルダにアイコンを追加。
 ```
 
 それでは拡張機能を追加します。
@@ -125,17 +121,17 @@ Visual Studio Codeで開発しやすくするため、さらに**拡張機能**�
 
 ![image](https://i.gyazo.com/182e29f848be2617b979606d4ae0dcd5.png)
 
-まずは「Ruby」を検索します。
+まずは「PHP Intelephense」と検索します。
 
-すると次の画像のようにRubyが表示されるのでインストールします。
+すると次の画像のように「PHP Intelephense」が表示されるのでインストールします。
 
-![image](https://i.gyazo.com/53bc02340dd67abd8c2b1a2cf8c63aa0.png)
+![image](https://i.gyazo.com/f2aab5e0d20853c6b7e3b08fea56683a.png)
 
-これでRubyがインストールできました。
+これで「PHP Intelephense」がインストールできました。
 
-同じ方法で、「Japanese Language Pack for Visual Studio Code」「vscode-icons」を検索して、それぞれインストールをしてください。
+同じ方法で他の拡張機能もインストールしてください。
 
-3つの拡張機能のインストールができたら、VSCodeを**再起動**します。VSCodeが再起動されると拡張機能が使えるようになります。
+3つの拡張機能がインストールできたらVSCodeを**再起動**します。VSCodeが再起動されると拡張機能が使えるようになります。
 
 
 ## ターミナルを確認する
