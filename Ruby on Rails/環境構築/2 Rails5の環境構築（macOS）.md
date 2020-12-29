@@ -1,6 +1,6 @@
 > ここではmacOSにおけるRuby on Railsの環境構築方法を記載しています。対応バージョンは以下の通りです。
 >
-> - Ruby 2.6.5
+> - Ruby 2.6.6
 > - Rails 5.2.3
 >
 > Rails6を使う場合は[こちら](https://github.com/Techpit-Market/environment-construction-kit/blob/master/Ruby%20on%20Rails%20%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89%E3%82%AD%E3%83%83%E3%83%88/3%20Rails6%E3%81%AE%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89%EF%BC%88macOS%EF%BC%89.md)を参照ください。
@@ -105,22 +105,22 @@ Only latest stable releases for each Ruby implementation are shown.
 Use 'rbenv install --list-all' to show all local versions.
 ```
 
-現在の最新のバージョンは2.6.5になるので、2.6.5のバージョンをインストールします。（2019年11月時点）
+現在の最新のバージョンは2.6.6になるので、2.6.6のバージョンをインストールします。（2020年12月時点）
 
-2.6.5のバージョンが表示されない場合は、rbenvとruby​​-buildを最新にアップグレードする必要があります。
+2.6.6のバージョンが表示されない場合は、rbenvとruby​​-buildを最新にアップグレードする必要があります。
 
 参考：[rbenv Upgrading with Homebrew](https://github.com/rbenv/rbenv#upgrading-with-homebrew)
 
 それでは、以下のコマンドを実行してください。(インストール完了まで数分かかることがあります。)
 
 ```
-$ rbenv install 2.6.5
+$ rbenv install 2.6.6
 ```
 
 インストールが完了したら、PC（サーバー）内で共通に使うためにグローバルで利用するバージョンを設定します。
 
 ```
-$ rbenv global 2.6.5
+$ rbenv global 2.6.6
 ```
 
 プロジェクトごとにRubyのバージョンを指定する場合は`global`ではなく`local`を使います。
@@ -129,7 +129,7 @@ $ rbenv global 2.6.5
 
 ```
 $ ruby -v
-ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-darwin19]
+ruby 2.6.6p146 (2020-03-31 revision 67876) [x86_64-darwin19]
 ```
 
 
