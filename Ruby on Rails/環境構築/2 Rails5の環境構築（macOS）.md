@@ -88,38 +88,21 @@ $ source ~/.bash_profile
 $ rbenv install -l
 ```
 
-すると下記のようにrubyのインストール可能なバージョンの一覧が表示されます。
+コマンドを実行すると、最新の安定版のバージョンが一覧で表示されます。
 
 ```
-Available versions:
-  1.8.5-p52
-  1.8.5-p113
-  1.8.5-p114
-  ---中略---
-  2.5.0
-  2.5.1
-  2.5.2
-  2.5.3
-  2.5.4
-  2.5.5
-  2.5.6
-  2.5.7
-  2.6.0-dev
-  2.6.0-preview1
-  2.6.0-preview2
-  2.6.0-preview3
-  2.6.0-rc1
-  2.6.0-rc2
-  2.6.0
-  2.6.1
-  2.6.2
-  2.6.3
-  2.6.4
-  2.6.5
-  2.7.0-dev
-  .
-  .
-  .
+2.5.8
+2.6.6
+2.7.2
+jruby-9.2.13.0
+maglev-1.0.0
+mruby-2.1.2
+rbx-5.0
+truffleruby-20.2.0
+truffleruby+graalvm-20.2.0
+
+Only latest stable releases for each Ruby implementation are shown.
+Use 'rbenv install --list-all' to show all local versions.
 ```
 
 現在の最新のバージョンは2.6.5になるので、2.6.5のバージョンをインストールします。（2019年11月時点）
