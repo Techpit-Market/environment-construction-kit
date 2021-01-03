@@ -124,6 +124,7 @@ sudo ln -s /etc/alternatives/php7 /usr/bin/php
 最後に以下のコマンドで、先ほど指定したバージョンが表示されることを確認してください。
 
 ```bash
+php -v
 PHP 7.3.23 (cli) (built: Oct 21 2020 20:24:49) ( NTS )
 Copyright (c) 1997-2018 The PHP Group
 Zend Engine v3.3.23, Copyright (c) 1998-2018 Zend Technologies
