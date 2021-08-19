@@ -136,7 +136,7 @@ brew upgrade asdf
 echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ~/.bash_profile
 ```
 
-メッセージは表示されません。
+特にメッセージは表示されません。
 
 次に`source`というコマンドを使って追加した内容を反映します。
 
@@ -252,7 +252,7 @@ asdf list nodejs
 
 ここではグローバルに設定する方法を説明します。
 
-### グローバルに設定する
+以下のコマンドを実行してください。
 
 ```console
 asdf global nodejs lts
