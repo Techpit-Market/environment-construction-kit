@@ -21,7 +21,8 @@ Ubuntuを開いて以下のコマンドを入力し、エンターキーを押�
 node -v
 ```
 
-> 画像?
+<img src="https://user-images.githubusercontent.com/25563739/131724914-01eb9466-a79b-4eed-bb28-d726cff8e581.png" width="700">
+
 
 以下のようにインストールされているNode.jsのバージョンが表示されれば、すでにインストール済みですので、本パートは読み飛ばしてください。
 
@@ -229,6 +230,8 @@ ls -l /usr/local
 
 以下のように、`asdf`ディレクトリのアクセス権が`drwxrwsr-x `と設定されていて、グループに`asdf`が設定されていれば成功です。
 
+<img src="https://user-images.githubusercontent.com/25563739/131725254-59a04b75-edf9-41f6-bfaf-bbe86fc5a197.png" width="900">
+
 以上で、asdfの実行権限の設定は完了です。
 
 ## asdfにPATHを通す
@@ -250,11 +253,13 @@ sudo vi /etc/profile.d/asdf.sh
 
 以下のような画面が表示されます。
 
+<img src="https://user-images.githubusercontent.com/25563739/131725110-a4c52a64-e594-4d4f-82d0-79fb87b5ede6.png" width="800">
+
 最初にキーボードの`i`キーを押してください。
 
 以下のようにウインドウの下部に`INSERT`と表示されれば、書き込みの準備ができています。
 
-> 画像
+<img src="https://user-images.githubusercontent.com/25563739/131725088-99f07237-ea85-4221-adda-0234b7d3e11e.png" width="800">
 
 以下のコードをコピーし、ファイルに貼り付けてしてください。
 
