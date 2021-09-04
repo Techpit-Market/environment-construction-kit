@@ -178,7 +178,7 @@ gpg (GnuPG) 2.3.1
 
 以下のコマンドを実行してください。
 
-```consolw
+```console
 gawk --version
 ```
 
