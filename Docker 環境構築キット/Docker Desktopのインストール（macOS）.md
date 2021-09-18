@@ -16,15 +16,15 @@ type: "template"
 
 「Get Started」ボタンをクリックしてください。
 
-<img width="900" alt="スクリーンショット 2020-09-18 6 43 53" src="https://user-images.githubusercontent.com/25563739/93790586-2d9baa80-fc6e-11ea-8acc-6475181c3681.png">
+<img width="900" alt="docker.com Get Started" src="https://user-images.githubusercontent.com/3354527/133880108-19a4aa3f-148f-4335-8745-2a82d7728d7a.png">
 
 「Download for Mac」ボタンをクリックしてください。
 
-<img width="800" alt="スクリーンショット 2020-09-18 6 46 27" src="https://user-images.githubusercontent.com/25563739/93790687-499f4c00-fc6e-11ea-8c95-804e011ce9f3.png">
+<img width="800" alt="docker.com Download for Mac" src="https://user-images.githubusercontent.com/3354527/133880103-11852c7d-6edd-4e6c-864d-2c42ad17d911.png">
 
 任意のディレクトリに保存してください。
 
-<img width="890" alt="スクリーンショット 2020-09-18 6 53 31" src="https://user-images.githubusercontent.com/25563739/93790796-68054780-fc6e-11ea-8050-f8295d7da145.png">
+<img width="890" alt="Download and Save dialog" src="https://user-images.githubusercontent.com/3354527/133880106-1cbb6b7e-09d7-4980-8632-6c6ad27f6af9.png">
 
 
 ## Docker Desktop for Macをインストール
