@@ -26,7 +26,9 @@ php -v
 以下のようにインストールされているPHPのバージョンが8.0系であれば、本パートは読み飛ばしてください。
 
 ```
-
+PHP 8.0.10 (cli) (built: Sep 11 2021 19:09:08) ( NTS )
+Copyright (c) The PHP Group
+Zend Engine v4.0.10, Copyright (c) Zend Technologies
 ```
 
 
