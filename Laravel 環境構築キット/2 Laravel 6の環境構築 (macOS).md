@@ -85,7 +85,7 @@ Laravelアプリケーションを起動したら、ブラウザで「http://loc
 
 次の画像のようにLaravelのデフォルトページが表示されていれば、うまく動作しています。
 
-画像
+<img width="1142" alt="1-3-7" src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/24378/b84f4055-07cd-4a54-bb7f-b29ed3939082.png">
 
 以上で今回のパートは終了です。
 
