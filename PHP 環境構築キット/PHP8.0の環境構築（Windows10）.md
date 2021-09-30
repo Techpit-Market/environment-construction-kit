@@ -56,7 +56,7 @@ PHP8.0系とComposerがすでにインストールされている方は、本パ
 
 使っている環境全体のバージョンだけでなく、プロジェクトごとにバージョンを設定することもできます。
 
-Node.jsでは「nvm」、Rubyでは「rbenv」など、それぞれの言語のバージョン管理ツールが用意されていますが、複数の管理ツールがあると、そのツール自体の管理にも手間がかかります。
+PHPでは「phpenv」、Rubyでは「rbenv」など、それぞれの言語のバージョン管理ツールが用意されていますが、複数の管理ツールがあると、そのツール自体の管理にも手間がかかります。
 
 そこで今回は、様々なプログラミング言語をまとめて管理できる**asdf**というツールをインストールします。
 
@@ -139,7 +139,7 @@ curl --version
 以下のコマンドを実行してください。
 
 ```console
-sudo git clone https://github.com/asdf-vm/asdf.git /usr/local/asdf --branch v0.8.1
+sudo git clone https://github.com/asdf-vm/asdf.git /usr/local/asdf
 ```
 
 以下のようなメッセージが表示されたらクローンは完了です。
