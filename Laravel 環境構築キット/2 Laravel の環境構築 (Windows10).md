@@ -84,11 +84,11 @@ php artisan serve
 Laravel development server started: http://127.0.0.1:8000
 ```
 
-Laravelアプリケーションを起動したら、ブラウザで「http://localhost:8000/」にアクセスします。
+Laravelアプリケーションを起動したら、ブラウザで「 http://localhost:8000/ 」にアクセスします。
 
 次の画像のようにLaravelのデフォルトページが表示されていれば、うまく動作しています。
 
-<img width="1142" alt="1-3-7" src="">
+<img width="1000" src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27728/575e7139-9d5e-4e50-a333-da48bfd322ae.png">
 
 以上で今回のパートは終了です。
 
