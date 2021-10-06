@@ -36,70 +36,70 @@ Visual Studio Codeのインストール方法を説明します。
 
 [【Visual Studio Codeのダウンロードページ】](https://code.visualstudio.com/)
 
-![image](https://i.gyazo.com/ff452316e9ce484a7740129f9e0eeedf.png)
+<img src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27735/7835127a-a7f3-4a05-a1d4-93cd8e8e29bf.png" alt="1">
 
 ダウンロードが完了したら、ダウンロードしたファイルを開いてください。
 
 ファイルを開くと、以下のようなウインドウが表示されるので、「同意する」を選択し、「次へ」ボタンをクリックしてください。
 
-<img src="" alt="2">
+<img width="600" src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27727/519f36a4-b64e-41cf-8dfd-08ba222a6136.png" alt="2">
 
 Visual Studio Codeをインストールするフォルダを指定する画面が表示されます。
 
 特に理由がなければ、何も変更せずにそのまま「次へ」ボタンをクリックしてください。
 
-<img src="" alt="3">
+<img width="600" src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27722/82361e60-8cf2-4152-87c4-c4aabdac2720.png" alt="3">
 
 スタートメニューに表示するためのショートカットを作成するフォルダを指定する画面が表示されます。
 
-<img src="" alt="4">
+<img width="600" src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27723/6b7117a1-ce64-4f73-994b-495e87d09200.png" alt="4">
 
 スタートメニューとは画面左下にあるWindowsアイコンをクリックすると表示されるメニューのことを指します。
 
 以下のようにVisual Studio Codeが格納されるフォルダを指定することができます。
 
-<img src="" alt="4-2">
+<img width="600" src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27743/d4316704-3272-427d-89a1-ea9f03993c24.png" alt="4-2">
 
 特にこだわりがなければ、何も変更せずに「次へ」ボタンをクリックしてください。
 
 インストール時に実行する追加のタスクを指定する画面が表示されます。
 
-<img src="" alt="5">
+<img width="600" src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27726/0fedc2be-b7d3-4499-a96e-b0acedb33887.png" alt="5">
 
 特にこだわりが無ければ、何も変更せずに「次へ」ボタンをクリックしてください。
 
 ここまで行なった設定を確認する画面が表示されます。
 
-<img src="" alt="6">
+<img width="600" src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27724/3b563c25-e8f3-40a9-a81c-92247ecf6517.png" alt="6">
 
 問題なければ「インストール」ボタンをクリックしてください。
 
 以下のようにインストールが始まります。
 
-<img src="" alt="7">
+<img width="600" src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27725/d23f1df4-4004-4c4c-8e1c-909bf4924f45.png" alt="7">
 
 インストールが終わると、以下のような画面が表示されるので、「Visual Studio Codeを実行する」と表示されているチェックボックスをオンにし、「完了」ボタンをクリックしてください。
 
-<img src="" alt="8">
+<img width="600" src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27729/25aa4806-4a79-4465-8d98-d5791a0f452f.png" alt="8">
 
 以下のように、Visual Studio Codeのウインドウが表示されれば完了です。
 
-<img src="" alt="9">
+<img src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27730/f3d25ed9-d376-43ac-9431-2682566033d7.png" alt="9">
 
 ## Visual Studio Code の設定をカスタマイズ
 Visual Studio Codeはデフォルト設定でも利用できますが、ここでは扱いやすいように次のカスタマイズを行ないます（各自の好みで設定しても問題はありません）。
 
 設定をはじめるには、画面左下の歯車アイコンをクリックして設定画面を開きます。
 
-<img src="" alt="16">
+<img src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27738/e0cc5a66-e755-4e57-8151-d5250caa0287.png" alt="16">
 
 設定画面が開いたら、以下の画像で示した、画面右上にあるアイコンをクリックします。
 
-<img src="" alt="17">
+<img src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27736/ad4fa499-5744-4d3e-8c4b-dba93be4cafb.png" alt="17">
 
 アイコンをクリックすると、次の画面のような`settings.json`ファイルが表示されます。
 
-<img src="" alt="18">
+<img src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27731/48b25f28-879e-4972-815b-acbd9fc2e7b8.png" alt="18">
 
 `settings.json`ファイルに以下のコードをコピーします（内容を理解する必要はありません）。 
 
@@ -129,7 +129,7 @@ Visual Studio Codeはデフォルト設定でも利用できますが、ここ�
 
 次の画像のように、画面左側に設定が表示されるとカスタマイズ完了です。
 
-<img src="" alt="19">
+<img src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27740/d1a170e1-da55-4cbb-9cab-6e3381523680.png" alt="19">
 
 ## Visual Studio Codeの拡張機能をインストール
 Visual Studio Codeで開発しやすくするため、さらに**拡張機能**を追加します。追加する拡張機能は次の3つです。
@@ -147,17 +147,17 @@ Visual Studio Codeで開発しやすくするため、さらに**拡張機能**�
 
 次の画像の左にある拡張機能アイコンをクリックしてください。
 
-<img src="" alt="20">
+<img src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27739/897d15c9-c85d-4cb6-92c4-ffd3fed031ec.png" alt="20">
 
 拡張機能の「MARKETPLACE」が表示されるので、検索バーでインストールする拡張機能を入力して検索します。
 
-<img src="" alt="14">
+<img src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27741/423e775e-e44f-4607-a67d-b9e65e3e56da.png" alt="14">
 
 まずは「PHP Intelephense」と検索します。
 
 すると次の画像のように「PHP Intelephense」が表示されるのでインストールします。
 
-<img src="" alt="15">
+<img src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27742/e95be46b-8183-4f69-a424-3ffbaaae888c.png" alt="15">
 
 これで「PHP Intelephense」がインストールできました。
 
@@ -174,21 +174,21 @@ Ubuntuのコンソールウインドウもターミナルの一種です。
 
 画面上部で「Terminal(ターミナル)」をクリックし、表示されたメニューから「New Terminal(新しいターミナル)」をクリックしてください。
 
-<img src="" alt="10">
+<img src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27732/f212cd90-2207-42f1-9cdf-e718bc8e8cb5.png" alt="10">
 
 以下のように、画面下部にターミナルが表示されます。
 
-<img src="" alt="11">
+<img src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27733/16a0b511-c21b-483a-b51d-0c6c051ed015.png" alt="11">
 
 ここで表示されているターミナルはWindows10に標準でインストールされているPowerShellというツールです。
 
 Ubuntuのコンソールウインドウを開くには、画面右側にある「＋」アイコンの右にある下向きのアイコンをクリックし、表示されたメニューから「Ubuntu-20.24 (WSL)」をクリックします。
 
-<img src="" alt="12">
+<img src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27737/15a60cb0-5da4-438c-88a6-42f9208ab2d0.png" alt="12">
 
 以下のように、Ubuntuのコンソールウインドウが表示されます。
 
-<img src="" alt="13">
+<img src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27734/f84166cf-cb03-416a-8399-b13d4bc4f442.png" alt="13">
 
 以上でこのパートは終了です。
 
