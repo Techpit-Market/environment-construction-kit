@@ -81,7 +81,7 @@ Laravel development server started: http://127.0.0.1:8000
 [Sun Sep 26 05:53:29 2021] PHP 8.0.10 Development Server (http://127.0.0.1:8000) started
 ```
 
-Laravelアプリケーションを起動したら、ブラウザで「http://localhost:8000/」にアクセスします。
+Laravelアプリケーションを起動したら、ブラウザで「 http://localhost:8000/ 」にアクセスします。
 
 次の画像のようにLaravelのデフォルトページが表示されていれば、うまく動作しています。
 
