@@ -150,7 +150,7 @@ brew upgrade asdf
 echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ~/.bash_profile
 ```
 
-特にメッセージは表示されません。
+コマンドを実行しても特にメッセージは表示されません。
 
 次に`source`というコマンドを使って追加した内容を反映します。
 
@@ -272,7 +272,7 @@ asdf list nodejs
 asdf global nodejs lts
 ```
 
-特にメッセージは表示されません。
+コマンドを実行しても特にメッセージは表示されません。
 
 バージョンが設定されたか確認しましょう。
 
@@ -382,7 +382,7 @@ asdf global nodejs <バージョン>
 asdf local nodejs <バージョン>
 ```
 
-特にメッセージは表示されません。
+コマンドを実行しても特にメッセージは表示されません。
 
 バージョンが設定されたか確認しましょう。
 
