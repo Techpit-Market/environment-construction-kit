@@ -1,8 +1,10 @@
-> 
+> ここではmacOSにおけるVue.jsの環境構築方法を記載しています。
 >
-> 
+> VueCLIの`4.*`を用い、コマンドライン上で設定します。
 >
-> 
+> 本キットではBabelとESLintを適用した環境を構築していますが、TypeScriptなど他のライブラリを使用する場合は追記・修正してください。
+>
+> プロジェクトディレクトリ名は「〇〇」と仮書きしているので、ご自身で書き換えてご使用ください。
 >
 > ここから教材
 
@@ -85,7 +87,6 @@ Vue CLI v4.5.14
 ```
 
 ### Vue.jsのバージョンの選択
-
 今回はVue.js 3系を使用するので、「3.x」を選択してください。
 
 ```
@@ -97,7 +98,7 @@ Vue CLI v4.5.14
 ### Linter / Formatter の選択
 Linter / Formatter の設定を選択します。
 
-今回はESLintというLinterのみ使用するよう設定するので、「ESLint with error prevention only」を選択してください。
+今回はESLintというLinterのみ使用する設定にするので、「ESLint with error prevention only」を選択してください。
 
 ```
 ? Pick a linter / formatter config: (Use arrow keys)
@@ -110,7 +111,7 @@ Linter / Formatter の設定を選択します。
 ### Linter実行タイミングの選択
 Linterをいつ実行するのかを選択します。
 
-ファイルを保存したタイミングとgitのコミットを行なったタイミングを選択でき、両方選択することもできます。
+ファイルを保存したタイミングとgitのコミットを行なったタイミングで選択でき、両方選択することもできます。
 
 今回はファイルを保存したタイミングでのみLinterを実行したいため、「Lint on save」にのみチェックを入れて次へ進みます。
 
@@ -169,7 +170,7 @@ BabelやESLintの設定を`package.json`というファイルで行なうか、�
 ### プロジェクトの作成
 ここまで行なった設定を踏まえて、Vue.jsのプロジェクトが作成されます。
 
-以下のように、「Successfully created project vue-sample.」と表示されれば、プロジェクトの作成は完了です。
+以下のように、「🎉  Successfully created project vue-sample.」と表示されれば、プロジェクトの作成は完了です。
 
 ```
 🎉  Successfully created project vue-sample.
