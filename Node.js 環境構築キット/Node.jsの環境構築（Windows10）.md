@@ -402,6 +402,8 @@ GNU Awk 5.1.0, API: 2.0 (GNU MPFR 4.0.2, GNU MP 6.2.0)
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 ```
 
+上記のコマンドを実行して、「Permission denied ・・・」といったエラーが表示される場合は、Ubuntuの端末(ターミナル)を一度閉じ、開き直してから、もう一度コマンドを実行してください。
+
 以下のコマンドを実行して、プラグインがインストールできたか確認しましょう。
 
 ```console
