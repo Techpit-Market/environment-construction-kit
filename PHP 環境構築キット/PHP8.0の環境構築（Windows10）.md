@@ -356,6 +356,8 @@ sudo apt-get update && sudo apt-get install -y autoconf bison build-essential cu
 asdf plugin-add php https://github.com/asdf-community/asdf-php.git
 ```
 
+上記のコマンドを実行して、「Permission denied ・・・」といったエラーが表示される場合は、Ubuntuの端末(ターミナル)を一度閉じ、開き直してから、もう一度コマンドを実行してください。
+
 以下のコマンドを実行して、プラグインがインストールできたか確認しましょう。
 
 ```console
