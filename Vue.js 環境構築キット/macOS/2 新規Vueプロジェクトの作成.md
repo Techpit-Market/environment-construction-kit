@@ -216,7 +216,8 @@ Vue.jsアプリケーションを起動したら、ブラウザで「 http://loc
 
 次の画像のようにVue.jsのデフォルトページが表示されていれば、うまく動作しています。
 
-<img src="" width="1000">
+<img src="https://user-images.githubusercontent.com/25563739/140450645-47a8e8ed-ada0-4b6c-98d6-119b3b6b8ae2.png" width="1000">
+
 
 以上で今回のパートは終了です。
 
