@@ -208,7 +208,18 @@ php
 asdf install php 8.0.10
 ```
 
-インストールが完了したら、以下のコマンドを実行して、インストールされたか確認しましょう。
+インストールが完了すると、以下のようなメッセージが表示されます。
+
+```
+Installer verified
+All settings correct for using Composer
+Downloading...
+
+Composer (version 2.1.11) successfully installed to: ~/.asdf/installs/php/8.0.10/bin/composer
+Use it: php /Users/hikaru/.asdf/installs/php/8.0.10/bin/composer
+```
+
+以下のコマンドを実行して、インストールされたか確認しましょう。
 
 ```console
 asdf list php
