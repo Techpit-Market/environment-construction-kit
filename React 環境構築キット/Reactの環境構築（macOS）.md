@@ -86,11 +86,11 @@ To create a production build, use yarn build.
 
 また、ブラウザが自動で開き、以下の画面のようにReactのデフォルトページが表示されていれば、うまく動作しています。
 
-[画像]
+<img width="1040" src="https://user-images.githubusercontent.com/25563739/140449164-3ff7ef2e-08ac-4afe-b930-1914d0e7ced3.png">
 
 もし自動でブラウザが開かない場合は、Google ChromeやSafariなどのブラウザを起動し、URL欄に`http://localhost:3000`を貼り付け、エンターキーを押すと画面が表示されます。
 
-[画像]
+<img width="836" src="https://user-images.githubusercontent.com/25563739/140449673-fe5f387a-645e-4fb8-9a5d-5183551c5d4a.png">
 
 以上で今回のパートは終了です。
 
