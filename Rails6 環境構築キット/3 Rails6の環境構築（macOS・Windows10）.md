@@ -1,4 +1,4 @@
-> ここではmacOSにおけるRuby on Railsの環境構築方法を記載しています。対応バージョンは以下の通りです。
+> ここではmacOSとWindows10(WSL2・Ubuntu)におけるRuby on Railsの環境構築方法を記載しています。対応バージョンは以下の通りです。
 >
 > - Ruby 3.0.2
 >   - https://www.ruby-lang.org/ja/downloads/
@@ -12,16 +12,12 @@
 > ここから教材
 
 
-# Ruby on Railsの環境構築（macOS）
+# Ruby on Railsの環境構築（macOS・Windows10）
 Rubyのフレームワークである**Ruby on Rails**をインストールし、Webアプリケーションを開発する環境を構築します。
 
 今回はRuby on Rails 6系の環境構築を行ないます。
 
 すでにRuby on Rails 6系の環境が用意されていれば、この回を読み飛ばしてもかまいません。
-
-::: warn
-注意）今回のパートで環境構築する対応のPCはmacOSになります。
-:::
 
 ## Bundlerのインストール
 最初に**Bundler**をインストールします。
@@ -36,7 +32,21 @@ Gemコマンドで簡単にインストールやアンインストールがで�
 - [Bundler](https://bundler.io/)
 - [RubyGems](https://rubygems.org/)
 
-それではBundlerをインストールしましょう。以下のコマンドを入力します。
+Bundlerはデフォルトでインストールされている場合もあるので、以下のコマンドで確認しましょう。
+
+```console
+bundle -v
+```
+
+コマンドを実行し、以下のようなメッセージが表示されたらインストールされています。
+
+```
+Bundler version 2.2.22
+```
+
+もしバージョン数が表示されなければ、以下に進んでBundlerをインストールしましょう。
+
+以下のコマンドを実行してください。
 
 ```console
 gem install bundler
@@ -46,7 +56,7 @@ gem install bundler
 
 インストールされたBundlerのバージョンを確認しましょう。
 
-次のコマンドを入力します。
+次のコマンドを実行してください。
 
 ```console
 bundler -v
@@ -63,37 +73,116 @@ Bundler version 2.2.22
 これでBundlerがインストール済みであることを確認できました。
 
 ## yarnをインストール
+
 次に**yarn**をインストールします。
 
 yarnはJavaScriptのライブラリの利用に必要なパッケージマネージャです。
 
 yarnと互換性のあるnpmというパッケージマネージャもあります。しかし、Rails6ではWebpackerが標準になったことにより、yarnが必要です。
 
-それでは、yarnのインストールを行いましょう。
+yarnもRubyと同様にasdfで管理することができます。
 
-次のコマンドを入力します。
+それでは、asdfを用いてyarnのインストールを行ないましょう。
+
+### プラグインのインストール
+
+まずはyarnを管理するためのプラグインをインストールします。
+
+以下のコマンドを実行してください。
 
 ```console
-brew install yarn
+asdf plugin-add yarn
 ```
 
-Homebrewのコマンドを実行すると、yarnがインストールされます。
+コマンドを実行すると以下のようなメッセージが表示されます。
 
-yarnが実際にインストールされたかを確認するために、次のコマンドを入力します。
+```
+updating plugin repository...remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 18 (delta 11), reused 9 (delta 5), pack-reused 0
+Unpacking objects: 100% (18/18), 3.05 KiB | 66.00 KiB/s, done.
+From https://github.com/asdf-vm/asdf-plugins
+   232d2df..d51b43b  master     -> origin/master
+HEAD is now at d51b43b feat: deck plugin (#509)
+```
+
+以下のコマンドを実行して、プラグインがインストールできたか確かめましょう。
+
+```console
+asdf plugin list
+```
+
+以下のように、yarn と表示されていれば成功です。
+
+```
+ruby
+yarn
+```
+
+### yarnのインストール
+
+次に最新のyarnをインストールします。
+
+以下のコマンドを実行してください。
+
+```console
+asdf install yarn latest
+```
+
+コマンドを実行すると以下のようにメッセージが数十行表示されます。
+
+```
+・
+・
+・
+gpg: keybox'~/.asdf/keyrings/yarn/pubring.kbx'が作成されました
+gpg: ~/.asdf/keyrings/yarn/trustdb.gpg: 信用データベースができました
+gpg: 鍵1646B01B86E50310: 公開鍵"Yarn Packaging <yarn@dan.cx>"をインポートしました
+・
+・
+・
+```
+
+yarnがインストールできたか確かめましょう。
+
+以下のコマンドを実行してください。
+
+```console
+asdf list yarn
+```
+
+以下のようなメッセージが表示されれば、インストール成功です。
+
+```
+ 1.22.17
+```
+
+### バージョンを設定
+
+インストールが完了したら、バージョンを使用する設定をしましょう。
+
+以下のコマンドを実行してください。
+
+```console
+asdf global yarn latest
+```
+
+コマンドを実行しても特にメッセージは表示されません。
+
+最後にyarnコマンドが使用できるか確認しましょう。
+
+以下のコマンドを実行してください。
 
 ```console
 yarn -v
 ```
 
-コマンドを実行すると、次のように表示されます。
+以下のように、バージョン数が表示されれば成功です。
 
 ```
-1.22.10
+1.22.17
 ```
-
-ここでは「`1.22.10`」と表示されました。
-
-バージョン情報が表示されていれば、yarnがインストールされたことが確認できます。
 
 ## Railsプロジェクトのディレクトリを作成
 Rails Tutorialや入門書などでは、システム(グローバル)にRailsをインストールする手順が説明されていることが多いですが、ここではプロジェクト(ローカル)にインストールする手順を説明します。
