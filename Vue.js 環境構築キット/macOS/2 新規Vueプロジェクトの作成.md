@@ -154,11 +154,11 @@ BabelやESLintの設定を`package.json`というファイルで行なうか、�
 ```
 
 ### パッケージマネージャの選択
-パッケージをどのツールで管理するかを選択します。
+Yarnというパッケージ管理ツールをインストールしている場合、どのツールで管理するかを選択するか聞かれます。
 
 今回は`npm`でパッケージを管理するため、「Use NPM」を選択して、エンターキーを押してください。
 
-なお、以前にVueCLIでVue.jsの環境構築をしたことがある場合は、この設問が表示されないことがあります。
+なお、以前にVueCLIでVue.jsの環境構築をしたことがある場合は、Yarnをインストールしていても、この設問が表示されないことがあります。
 
 ```
 ? Pick the package manager to use when installing dependencies: (Use arrow keys)
