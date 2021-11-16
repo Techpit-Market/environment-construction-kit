@@ -370,6 +370,36 @@ asdf plugin list
 php
 ```
 
+::: info
+**`apt`コマンドでインストールしたパッケージの確認方法**
+
+パッケージのインストールがうまくいっていないためにPHPが実行できない場合があります。
+
+以下のコマンドを実行すると、インストール済みのパッケージが表示されます。
+
+```console
+sudo dpkg -l
+```
+
+コマンドを実行すると以下のようにパッケージが一覧で表示されます。
+
+```
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                           Version                           Architecture Description
++++-==============================-=================================-============-=====================================>
+ii  accountsservice                0.6.55-0ubuntu11                  amd64        query and manipulate user account inf>
+ii  adduser                        3.118ubuntu2                      all          add and remove users and groups
+ii  alsa-topology-conf             1.2.2-1                           all          ALSA topology configuration files
+・
+・
+・
+```
+
+環境構築がうまくいかない場合は、パッケージが不足していないか確認しましょう。
+:::
+
 ## PHP8.0のインストール
 今回は最新安定版のバージョンである8.0.10をインストールします。
 
