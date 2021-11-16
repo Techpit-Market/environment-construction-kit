@@ -171,6 +171,8 @@ Rubyをインストールするのに必要なプラグインをインストー�
 asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
 ```
 
+コマンドを実行しても特にメッセージは表示されません。
+
 以下のコマンドを実行して、プラグインがインストールできたか確認しましょう。
 
 ```console
