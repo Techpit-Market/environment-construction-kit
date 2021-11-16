@@ -1,4 +1,4 @@
-> ここではmacOSにおけるReactの環境構築方法を記載しています。
+> ここではmacOSとWindows10(WSL2・Ubuntu20.04)におけるReactの環境構築方法を記載しています。
 >
 > Node.jsがインストール済みであることを前提としているため、[「Node.js 環境構築キット」](https://github.com/Techpit-Market/environment-construction-kit/tree/master/Node.js%20%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89%E3%82%AD%E3%83%83%E3%83%88)も合わせて使用してください。
 >
@@ -6,12 +6,8 @@
 >
 > ここから教材
 
-# Reactの環境構築（macOS）
+# Reactの環境構築（macOS・Windows10）
 JavaScriptのフレームワークであるReactをインストールし、Webアプリケーションを開発する環境を構築します。
-
-::: warn
-今回のパートで環境構築する対応のPCはmacOSになります。
-:::
 
 ## 新規Reactプロジェクトの作成
 React環境のプロジェクトディレクトリを作成し、Webアプリケーションを作成するためのベースとなる環境を構築します。
@@ -40,7 +36,17 @@ Reactプロジェクトを作成するには、**npx**というコマンドを�
 npx create-react-app 〇〇
 ```
 
-以下のようなメッセージが表示されれば成功です。
+上記コマンドを初めて実行する場合に限り、以下のメッセージが表示されます。
+
+```
+Need to install the following packages:
+  create-react-app
+Ok to proceed? (y)
+```
+
+`create-react-app`パッケージをインストールするか聞かれているので、「y」を入力してエンターキーを押してください。
+
+以下のようなメッセージが表示されればReactプロジェクトの作成は成功です。
 
 ```
 Success! Created react_sample at /Users/xxx/〇〇
@@ -67,7 +73,7 @@ cd 〇〇
 プロジェクトディレクトリへ移動できたら、Reactアプリケーションを立ち上げます。
 
 ```console
-yarn start
+npm start
 ```
 
 うまくサーバーが起動すると、ターミナルで以下のようなメッセージが表示されます。
