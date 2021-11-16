@@ -159,7 +159,7 @@ Visual Studio Codeで開発しやすくするため、さらに**拡張機能**�
 
 すると次の画像のように「Ruby」が表示されるのでインストールします。
 
-<img src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/27742/e95be46b-8183-4f69-a424-3ffbaaae888c.png" alt="15">
+<img src="https://techpit-market-prod.s3.amazonaws.com/uploads/part_attachment/file/28680/dc7264f0-9fb6-4cd4-aa02-d7e83b5cfae4.png" alt="15">
 
 これで「Ruby」がインストールできました。
 
