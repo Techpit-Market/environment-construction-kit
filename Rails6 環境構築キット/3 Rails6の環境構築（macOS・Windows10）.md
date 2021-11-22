@@ -144,6 +144,68 @@ gpg: 鍵1646B01B86E50310: 公開鍵"Yarn Packaging <yarn@dan.cx>"をインポー
 ・
 ```
 
+::: info
+**エラーが発生した場合**
+Macの方で、コマンドを実行すると以下のようなメッセージが表示されることがあります。
+
+```
+⛔ Missing one or more of the following dependencies: gpg
+```
+
+上記の場合、`gpg`というツールが必要とのことなので、Homebrewでインストールしましょう。
+
+以下のコマンドを実行してください。
+
+```console
+brew install gpg
+```
+
+コマンドを実行すると以下のようなメッセージが表示されます。
+
+```
+・
+・
+・
+==> Installing gnupg 
+==> Pouring gnupg--2.3.3_1.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/gnupg/2.3.3_1: 149 files, 13.2MB
+```
+
+インストールできたか確認しましょう。
+
+以下のコマンドを実行してください。
+
+```console
+gpg --version
+```
+
+以下のようにバージョン情報が表示されれば成功です。
+
+```
+gpg (GnuPG) 2.3.3
+libgcrypt 1.9.4
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GNU GPL-3.0-or-later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+・
+・
+・
+```
+
+もう一度yarnをインストールします。
+
+以下のコマンドを実行してください。
+
+```console
+asdf install yarn latest
+```
+
+特にエラーが表示されなければ完了です。
+
+:::
+
+
 yarnがインストールできたか確かめましょう。
 
 以下のコマンドを実行してください。
