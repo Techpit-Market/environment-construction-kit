@@ -31,9 +31,9 @@ Node.jsの最新バージョンを確認するには以下の公式ページを�
 
 - [Node.js](https://nodejs.org/ja/)
 
-最新バージョンは以下の画像の赤枠で囲った箇所に記載されています(以下の画像は2021/10/19現在のもの)。
+最新バージョンは以下の画像の赤枠で囲った箇所に記載されています(以下の画像は2021年12月現在のもの)。
 
-<img width="1040" src="https://user-images.githubusercontent.com/25563739/137866265-ecb99c9d-95d1-4f7c-beba-cf9bda1a9cad.png">
+<img width="1040" src="https://user-images.githubusercontent.com/25563739/144869715-cc2188fb-fff7-4c9e-9c93-d697a2251eae.png">
 
 もし`v13.○.○`や`v14.○.○`など、古いバージョンを使用している場合は、必ず最新バージョンにアップデートしてください。
 
