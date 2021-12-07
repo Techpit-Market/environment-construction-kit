@@ -61,7 +61,8 @@ yarnの最新バージョンを確認するにはyarnのGithubリポジトリを
 
 最新バージョンは以下の箇所に記載されています(以下の画像は2021年12月現在のもの)。
 
-<img width="1040" src="">
+<img width="1040" src="https://user-images.githubusercontent.com/25563739/145044192-ecc1366a-8b34-414c-b45b-9eb3b98bb294.png">
+
 
 最新バージョンでない場合はアップデートすることをおすすめします。
 
