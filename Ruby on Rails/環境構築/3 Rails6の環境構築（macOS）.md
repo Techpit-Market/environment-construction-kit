@@ -2,7 +2,7 @@
 >
 > - Ruby 2.7.2
 >   - https://www.ruby-lang.org/ja/downloads/
-> - Rails 6.0.3.4
+> - Rails 6.0.3.7
 >   - https://rubygems.org/gems/rails/versions
 >
 > ここから教材
@@ -295,14 +295,14 @@ yarn -v
 
 Railsのインストール時に「`-v バージョン番号`」とバージョンを指定してインストールできます。
 
-今回はバージョン「`6.0.3.4`」をインストールします。
+今回はバージョン「`6.0.3.7`」をインストールします。
 
 参考：[railsの全バージョン履歴](https://rubygems.org/gems/rails/versions)
 
 次のコマンドを入力します。
 
 ```console
-gem install rails -v 6.0.3.4
+gem install rails -v 6.0.3.7
 ```
 
 コマンドを実行すると、インストールを開始します。インストールの完了までに数分かかることがあります。
@@ -320,10 +320,10 @@ rails -v
 
 ```console
 rails -v
-Rails 6.0.3.4
+Rails 6.0.3.7
 ```
 
-「`Rails 6.0.3.4`」と表示されました。
+「`Rails 6.0.3.7`」と表示されました。
 
 これで無事にRuby on Railsのインストールが完了しました。
 
